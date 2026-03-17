@@ -1,9 +1,10 @@
 // ============================================================
-// INTERESES — Edita tus áreas de interés aquí
+// INTERESTS — Edit your areas of interest here
 // ============================================================
 
-const INTERESTS_INTRO = const INTERESTS_INTRO = "My work sits at the intersection of computational mechanics, numerical methods, and materials science. I am interested in developing and applying advanced simulation tools to understand the mechanical behavior of materials and structures, with emphasis on fracture, damage, and forming processes.";
-const RESEARCH_INTERESTS = [
+var INTERESTS_INTRO = "My work sits at the intersection of computational mechanics, numerical methods, and materials science. I am interested in developing and applying advanced simulation tools to understand the mechanical behavior of materials and structures, with emphasis on fracture, damage, and forming processes.";
+
+var RESEARCH_INTERESTS = [
   {
     category: "Research Interests",
     icon: "⬡",
@@ -32,6 +33,7 @@ const RESEARCH_INTERESTS = [
   }
 ];
 
+// These render as tags — short keywords, no descriptions needed
 const OTHER_INTERESTS = [
   {
     category: "Otros Intereses",
