@@ -5,71 +5,42 @@
 const UNDERGRADUATE_COURSES = [
   {
     id: "ug1",
-    code: "INF-201",
-    name: "Estructuras de Datos",
-    credits: 4,
-    semester: "Semestres I y II",
-    description: "Estudio de las estructuras de datos fundamentales: listas, pilas, colas, árboles y grafos. Implementación en lenguajes de programación modernos con énfasis en eficiencia algorítmica y aplicaciones prácticas.",
-    syllabus: "" // URL al syllabus si existe
+    code: "IMEC-1505",
+    name: "Engineering Graphic Design",
+    credits: 3,
+    description: "This course introduces drawing as a language of engineering and demonstrates how it serves as a powerful tool for design and communication. The course is project-based and challenges students to develop and communicate their ideas using contemporary design techniques and computer-aided design (CAD) tools. \\ Students develop essential skills and criteria for effective technical graphical communication, including: producing freehand sketches; using freehand drawing, instrument-based drawing, and CAD tools to communicate technical ideas; understanding the architecture and capabilities of CAD tools; visualizing three-dimensional objects and assemblies from two-dimensional representations and vice versa; applying acquired knowledge to design solutions to simple engineering problems; and interpreting and producing engineering drawings.
+      "
   },
   {
     id: "ug2",
-    code: "INF-315",
-    name: "Algoritmos y Complejidad",
-    credits: 4,
-    semester: "Semestre I",
-    description: "Fundamentos del diseño y análisis de algoritmos. Técnicas de divide y vencerás, programación dinámica, algoritmos voraces. Teoría de la complejidad computacional: clases P, NP y NP-completo.",
-    syllabus: ""
+    code: "IMEC-2001",
+    name: "Computational Tools",
+    credits: 3,
+    description: "Computing systems have become fundamental and indispensable tools in modern engineering practice. This course provides an exploratory introduction to algorithms and modern computational tools relevant to the modeling of systems and the solution of engineering problems. Throughout the course, students develop basic knowledge and skills for building models of different types of engineering systems. By the end of the course, students should feel comfortable exploring modern computational tools and using them effectively in their professional engineering practice."
   },
   {
     id: "ug3",
     code: "INF-420",
     name: "Simulación de Sistemas",
     credits: 3,
-    semester: "Semestre II",
-    description: "Modelado y simulación de sistemas discretos y continuos. Métodos de Monte Carlo, simulación de eventos discretos, validación y verificación de modelos. Uso de herramientas computacionales especializadas.",
-    syllabus: ""
+    description: "Modelado y simulación de sistemas discretos y continuos. Métodos de Monte Carlo, simulación de eventos discretos, validación y verificación de modelos. Uso de herramientas computacionales especializadas."
   },
   {
     id: "ug4",
-    code: "MAT-210",
-    name: "Probabilidad y Estadística",
-    credits: 4,
-    semester: "Semestres I y II",
-    description: "Introducción a la teoría de probabilidad y la estadística inferencial. Variables aleatorias, distribuciones de probabilidad, pruebas de hipótesis, regresión lineal y análisis de varianza.",
-    syllabus: ""
+    code: "IMEC-2009",
+    name: "Numerical Methods Programming Workshop",
+    credits: 3,
+    description: "This course provides a practical introduction to Numerical Methods in engineering, with emphasis on their formulation, analysis, and basic implementation using MATLAB. Over the course of eight weeks, students work on representative problems that lead them to derive and program elementary algorithms for solving nonlinear equations, linear systems, numerical differentiation and integration, and ordinary differential equations. MATLAB is used as a tool to support algorithmic understanding and facilitate experimentation, although the course does not focus on formal instruction of the programming language."
   }
 ];
 
 const POSTGRADUATE_COURSES = [
   {
     id: "pg1",
-    code: "CIC-701",
-    name: "Sistemas Complejos Adaptativos",
-    credits: 3,
-    level: "Doctorado / Maestría",
-    semester: "Semestre I",
-    description: "Teoría y modelado de sistemas complejos adaptativos. Emergencia, autoorganización y criticalidad. Modelos basados en agentes, redes pequeño mundo y libre de escala. Aplicaciones en sistemas sociales, biológicos y económicos.",
-    syllabus: ""
-  },
-  {
-    id: "pg2",
-    code: "CIC-702",
-    name: "Aprendizaje Automático Avanzado",
-    credits: 3,
-    level: "Doctorado / Maestría",
-    semester: "Semestre II",
-    description: "Métodos avanzados de machine learning: redes neuronales profundas, aprendizaje por refuerzo, modelos generativos y aprendizaje no supervisado. Énfasis en fundamentos matemáticos y aplicaciones de investigación.",
-    syllabus: ""
-  },
-  {
-    id: "pg3",
-    code: "CIC-650",
-    name: "Análisis de Redes Complejas",
-    credits: 3,
-    level: "Maestría",
-    semester: "Semestre I",
-    description: "Teoría de grafos aplicada al estudio de redes reales. Métricas de centralidad, detección de comunidades, dinámica sobre redes, modelos de formación de redes. Análisis con Python y herramientas especializadas.",
-    syllabus: ""
+    code: "IMEC-4614",
+    name: "Fundamentals of the Finite Element Method",
+    credits: 2,
+    level: "Magister",
+    description: "The Finite Element Method (FEM) is a fundamental tool for the numerical analysis and simulation of physical systems in engineering. This course provides an introduction to the fundamentals of FEM from an applied perspective, with emphasis on its formulation, computational implementation, and use as an engineering analysis tool. Through practical examples, students learn how to apply the method to obtain approximate solutions of differential equations in one and two dimensions."
   }
 ];
