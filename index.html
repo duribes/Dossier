@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dossier Académico</title>
+  <meta name="description" content="Dossier académico — investigación, docencia y grupo de investigación." />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Data files (edit these to update content) -->
+  <script src="data/profile.js"></script>
+  <script src="data/research.js"></script>
+  <script src="data/group.js"></script>
+  <script src="data/teaching.js"></script>
+  <script src="data/interests.js"></script>
+
+  <!-- Utilities -->
+  <script src="js/bibtex-parser.js"></script>
+</head>
+<body>
+
+  <!-- ══════════════════════════════════════════════════════
+       NAVIGATION
+  ══════════════════════════════════════════════════════ -->
+  <nav id="nav">
+    <div class="nav-inner">
+      <span class="nav-brand" id="nav-brand">Dossier</span>
+      <button class="nav-toggle" aria-label="Menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="#" data-section="home"     class="active">Home</a></li>
+        <li><a href="#" data-section="research"         >Research</a></li>
+        <li><a href="#" data-section="group"            >Research Group</a></li>
+        <li><a href="#" data-section="teaching"         >Teaching</a></li>
+        <li><a href="#" data-section="interests"        >Interests</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ══════════════════════════════════════════════════════
+       HOME
+  ══════════════════════════════════════════════════════ -->
+  <section id="section-home" class="page-section active">
+    <div id="home">
+      <div class="container">
+        <div class="home-grid">
+
+          <!-- Photo column -->
+          <div class="home-photo-col">
+            <div id="home-photo" class="home-photo-placeholder">Foto</div>
+          </div>
+
+          <!-- Info column -->
+          <div class="home-info">
+            <div id="home-title"    class="home-title">Cargo · Institución</div>
+            <h1  id="home-name"     class="home-name">Nombre Completo</h1>
+            <div id="home-institution" class="home-institution"></div>
+
+            <p id="home-bio" class="home-bio"></p>
+
+            <div class="home-contact">
+              <h3>Contacto</h3>
+              <ul id="home-contact" class="contact-list"></ul>
+            </div>
+
+            <div id="home-social" class="social-icons"></div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════
+       RESEARCH & TALKS
+  ══════════════════════════════════════════════════════ -->
+  <section id="section-research" class="page-section">
+    <div class="section container">
+      <p class="page-subtitle">Producción científica</p>
+      <h1 class="page-title">Research &amp; Talks</h1>
+
+      <!-- Publications -->
+      <div class="section-rule">
+        <h2>Publicaciones</h2>
+      </div>
+      <div id="publications-container"></div>
+
+      <!-- Talks -->
+      <div class="section-rule" style="margin-top:4rem">
+        <h2>Talks &amp; Conferencias</h2>
+      </div>
+      <div id="talks-container"></div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════
+       RESEARCH GROUP
+  ══════════════════════════════════════════════════════ -->
+  <section id="section-group" class="page-section">
+    <div class="section container">
+      <p class="page-subtitle">Equipo de trabajo</p>
+      <h1 id="group-name" class="page-title">Research Group</h1>
+
+      <!-- Group metadata -->
+      <div class="group-meta">
+        <div class="group-meta-item">
+          <span class="group-meta-label">Clasificación</span>
+          <span id="group-classification" class="group-meta-value">—</span>
+        </div>
+        <div class="group-meta-item">
+          <span class="group-meta-label">Fundado</span>
+          <span id="group-founded" class="group-meta-value">—</span>
+        </div>
+      </div>
+
+      <p id="group-description" class="group-intro"></p>
+
+      <div class="section-rule">
+        <h2>Miembros</h2>
+      </div>
+      <div id="members-grid" class="members-grid"></div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════
+       TEACHING
+  ══════════════════════════════════════════════════════ -->
+  <section id="section-teaching" class="page-section">
+    <div class="section container">
+      <p class="page-subtitle">Actividad docente</p>
+      <h1 class="page-title">Teaching</h1>
+
+      <!-- Undergraduate -->
+      <div class="section-rule">
+        <h2>Pregrado</h2>
+      </div>
+      <p class="level-label">Cursos de pregrado</p>
+      <div id="ug-grid" class="courses-grid"></div>
+
+      <!-- Postgraduate -->
+      <div class="section-rule">
+        <h2>Posgrado</h2>
+      </div>
+      <p class="level-label">Cursos de maestría y doctorado</p>
+      <div id="pg-grid" class="courses-grid"></div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════
+       INTERESTS
+  ══════════════════════════════════════════════════════ -->
+  <section id="section-interests" class="page-section">
+    <div class="section container">
+      <p class="page-subtitle">Áreas de interés</p>
+      <h1 class="page-title">Interests</h1>
+
+      <p id="interests-intro" class="interests-intro"></p>
+
+      <div id="research-interests"></div>
+      <div id="other-interests"></div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════════════════════ -->
+  <footer>
+    <div class="footer-grid">
+
+      <!-- Col 1: Name -->
+      <div>
+        <div id="footer-name" class="footer-name">Nombre Apellido</div>
+        <div id="footer-role" class="footer-role"></div>
+      </div>
+
+      <!-- Col 2: Links -->
+      <div style="display:flex; gap:2rem;">
+        <div>
+          <h4>Perfiles</h4>
+          <ul id="footer-links-1" class="footer-link-list"></ul>
+        </div>
+        <div>
+          <h4>Redes</h4>
+          <ul id="footer-links-2" class="footer-link-list"></ul>
+        </div>
+      </div>
+
+      <!-- Col 3: Message -->
+      <div>
+        <p class="footer-message">
+          "La ciencia es la mejor herramienta que tenemos para entender el mundo 
+          y mejorar la condición humana."
+        </p>
+      </div>
+
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="footer-year"></span> — Todos los derechos reservados.</span>
+      <span>GitHub Pages</span>
+    </div>
+  </footer>
+
+  <!-- App -->
+  <script src="js/app.js"></script>
+
+</body>
+</html>
