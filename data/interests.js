@@ -2,34 +2,31 @@
 // INTERESES — Edita tus áreas de interés aquí
 // ============================================================
 
-const INTERESTS_INTRO = `Mi trabajo se ubica en la intersección entre la computación, las matemáticas aplicadas 
-y las ciencias sociales. Estoy interesado tanto en el desarrollo de métodos y herramientas formales 
-como en su aplicación a problemas del mundo real.`;
-
+const INTERESTS_INTRO = const INTERESTS_INTRO = "My work sits at the intersection of computational mechanics, numerical methods, and materials science. I am interested in developing and applying advanced simulation tools to understand the mechanical behavior of materials and structures, with emphasis on fracture, damage, and forming processes.";
 const RESEARCH_INTERESTS = [
   {
-    category: "Intereses de Investigación",
+    category: "Research Interests",
     icon: "⬡",
     items: [
       {
-        title: "Sistemas Complejos",
-        description: "Modelado de fenómenos emergentes en sistemas con muchos componentes interactuantes: física estadística, transiciones de fase, criticalidad auto-organizada."
+        title: "Numerical Methods",
+        description: "Finite Element Method, Virtual Element Method, and Material Point Method for the simulation of complex mechanical systems and engineering problems."
       },
       {
-        title: "Ciencia de Redes",
-        description: "Estructura y dinámica de redes complejas. Redes sociales, biológicas y tecnológicas. Algoritmos de detección de comunidades y análisis de flujo."
+        title: "Fracture & Damage Mechanics",
+        description: "Crack propagation, cohesive zone models, damage mechanics, phase-field models, and fatigue analysis applied to engineering materials and structures."
       },
       {
-        title: "Aprendizaje Automático",
-        description: "Métodos estadísticos y computacionales para el aprendizaje a partir de datos. Interés particular en modelos interpretables y su aplicación en ciencias."
+        title: "Solid Mechanics & Materials",
+        description: "Thermoelasticity, composite materials, materials science, and metal forming processes. Study of mechanical behavior under diverse loading and thermal conditions."
       },
       {
-        title: "Modelado Basado en Agentes",
-        description: "Simulación de sistemas sociales y biológicos mediante agentes autónomos. Validación empírica de modelos y análisis de sensibilidad."
+        title: "High-Performance Computing",
+        description: "Parallel computing and HPC strategies for large-scale simulations. Development of open-source codes with emphasis on computational efficiency and reproducibility."
       },
       {
-        title: "Ciencia de Datos Espaciales",
-        description: "Análisis estadístico y computacional de datos con componente geográfico. Clustering espacial, análisis de patrones y modelado territorial."
+        title: "Computational Tools & Visualization",
+        description: "Mechanical design, computer programming, scientific visualization, and open science practices for transparent and accessible research."
       }
     ]
   }
@@ -40,11 +37,10 @@ const OTHER_INTERESTS = [
     category: "Otros Intereses",
     icon: "○",
     items: [
-      "Filosofía de la ciencia y epistemología",
-      "Historia y sociología de las matemáticas",
-      "Música contemporánea y composición",
-      "Senderismo y naturaleza",
-      "Literatura latinoamericana"
+      "Ride Bike",
+      "Read",
+      "Watch TV",
+      "Chill"
     ]
   }
 ];
