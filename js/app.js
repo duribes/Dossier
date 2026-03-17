@@ -61,7 +61,7 @@ function renderHome() {
   document.getElementById('home-bio').textContent         = p.bio;
 
   // Contact
-  const contactEl = document.getElementById('home-contact');
+  const contactEl = document.getElementById('home-contact-list');
   contactEl.innerHTML = `
     <li>${emailIcon()} <a href="mailto:${p.email}">${p.email}</a></li>
     ${p.phone   ? `<li>${phoneIcon()} <span>${p.phone}</span></li>` : ''}
