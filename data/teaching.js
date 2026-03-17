@@ -21,13 +21,6 @@ const UNDERGRADUATE_COURSES = [
   },
   {
     id: "ug3",
-    code: "INF-420",
-    name: "Systems Simulation",
-    credits: 3,
-    description: "Modeling and simulation of discrete and continuous systems. Monte Carlo methods, discrete-event simulation, model validation and verification. Use of specialized computational tools."
-  },
-  {
-    id: "ug4",
     code: "IMEC-2009",
     name: "Numerical Methods Programming Workshop",
     credits: 3,
@@ -40,7 +33,7 @@ const POSTGRADUATE_COURSES = [
     id: "pg1",
     code: "IMEC-4614",
     name: "Fundamentals of the Finite Element Method",
-    credits: 2,
+    credits: 4,
     description: "The Finite Element Method (FEM) is a fundamental tool for the numerical analysis and simulation of physical systems in engineering. This course provides an introduction to the fundamentals of FEM from an applied perspective, with emphasis on its formulation, computational implementation, and use as an engineering analysis tool. Students learn how to apply the method to obtain approximate solutions of differential equations in one and two dimensions."
   }
 ];
