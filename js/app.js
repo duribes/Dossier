@@ -222,10 +222,6 @@ function renderCourseCard(c) {
       </div>
       <div class="course-name">${c.name}</div>
       <div class="course-desc">${c.description}</div>
-      <div class="course-footer">
-        ${c.semester || c.level || ''}
-        ${c.syllabus ? ` · <a href="${c.syllabus}" target="_blank" style="color:var(--accent)">Syllabus</a>` : ''}
-      </div>
     </div>
   `;
 }
