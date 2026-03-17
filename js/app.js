@@ -127,7 +127,7 @@ function renderResearch() {
 }
 
 function renderPubItem(e) {
-  const type   = e.type === 'book' ? 'Libro' : e.type === 'article' ? 'Artículo' : e.type === 'inproceedings' ? 'Conferencia' : e.type;
+  const type   = e.type === 'book' ? 'Book' : e.type === 'article' ? 'Article' : e.type === 'inproceedings' ? 'Conference' : e.type;
   const venue  = e.journal || e.booktitle || e.publisher || '';
   const doiUrl = e.doi ? `https://doi.org/${e.doi}` : (e.url || '');
   return `
@@ -294,12 +294,13 @@ function officeIcon() { return `<svg class="contact-icon" viewBox="0 0 20 20" fi
 
 /* ─── Init ───────────────────────────────────────────────── */
 document.addEventListener('DOMContentLoaded', () => {
-  initNav();
-  renderHome();
-  renderResearch();
-  renderGroup();
-  renderTeaching();
-  renderInterests();
-  renderFooter();
-  showSection('home');
+  const run = (fn, label) => { try { fn(); } catch(e) { console.error(`[dossier] ${label}:`, e); } };
+  run(initNav,        'initNav');
+  run(renderHome,     'renderHome');
+  run(renderResearch, 'renderResearch');
+  run(renderGroup,    'renderGroup');
+  run(renderTeaching, 'renderTeaching');
+  run(renderInterests,'renderInterests');
+  run(renderFooter,   'renderFooter');
+  run(() => showSection('home'), 'showSection');
 });
