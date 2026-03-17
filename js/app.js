@@ -209,55 +209,58 @@ function renderMemberCard(m) {
 
 /* ─── Teaching ───────────────────────────────────────────── */
 function renderTeaching() {
-  document.getElementById('ug-grid').innerHTML  = UNDERGRADUATE_COURSES.map(renderCourseCard).join('');
-  document.getElementById('pg-grid').innerHTML  = POSTGRADUATE_COURSES.map(renderCourseCard).join('');
+  var ugGrid = document.getElementById('ug-grid');
+  var pgGrid = document.getElementById('pg-grid');
+  if (ugGrid) ugGrid.innerHTML = UNDERGRADUATE_COURSES.map(renderCourseCard).join('');
+  if (pgGrid) pgGrid.innerHTML = POSTGRADUATE_COURSES.map(renderCourseCard).join('');
 }
 
 function renderCourseCard(c) {
-  return `
-    <div class="course-card">
-      <div class="course-header">
-        <span class="course-code">${c.code || ''}</span>
-        <span class="course-credits">${c.credits ? c.credits + ' cr.' : ''}</span>
-      </div>
-      <div class="course-name">${c.name}</div>
-      <div class="course-desc">${c.description}</div>
-    </div>
-  `;
+  return '<div class="course-card">'
+    + '<div class="course-header">'
+    + '<span class="course-code">' + (c.code || '') + '</span>'
+    + '<span class="course-credits">' + (c.credits ? c.credits + ' cr.' : '') + '</span>'
+    + '</div>'
+    + '<div class="course-name">' + c.name + '</div>'
+    + '<div class="course-desc">' + c.description + '</div>'
+    + '</div>';
 }
 
 /* ─── Interests ──────────────────────────────────────────── */
 function renderInterests() {
-  document.getElementById('interests-intro').textContent = INTERESTS_INTRO;
+  var introEl = document.getElementById('interests-intro');
+  if (introEl) introEl.textContent = INTERESTS_INTRO;
 
-  const researchContainer = document.getElementById('research-interests');
-  RESEARCH_INTERESTS.forEach(sec => {
-    researchContainer.innerHTML = `
-      <div class="interest-section">
-        <h3>${sec.category}</h3>
-        <div class="interests-cards">
-          ${sec.items.map(i => `
-            <div class="interest-card">
-              <div class="interest-card-title">${i.title}</div>
-              <div class="interest-card-desc">${i.description}</div>
-            </div>
-          `).join('')}
-        </div>
-      </div>
-    `;
-  });
+  var researchContainer = document.getElementById('research-interests');
+  if (researchContainer) {
+    researchContainer.innerHTML = '';
+    RESEARCH_INTERESTS.forEach(function(sec) {
+      researchContainer.innerHTML += '<div class="interest-section">'
+        + '<h3>' + sec.category + '</h3>'
+        + '<div class="interests-cards">'
+        + sec.items.map(function(i) {
+            return '<div class="interest-card">'
+              + '<div class="interest-card-title">' + i.title + '</div>'
+              + '<div class="interest-card-desc">' + i.description + '</div>'
+              + '</div>';
+          }).join('')
+        + '</div></div>';
+    });
+  }
 
-  const otherContainer = document.getElementById('other-interests');
-  OTHER_INTERESTS.forEach(sec => {
-    otherContainer.innerHTML = `
-      <div class="interest-section">
-        <h3>${sec.category}</h3>
-        <div class="other-interests-list">
-          ${sec.items.map(i => `<span class="other-interest-tag">${i}</span>`).join('')}
-        </div>
-      </div>
-    `;
-  });
+  var otherContainer = document.getElementById('other-interests');
+  if (otherContainer) {
+    otherContainer.innerHTML = '';
+    OTHER_INTERESTS.forEach(function(sec) {
+      otherContainer.innerHTML += '<div class="interest-section">'
+        + '<h3>' + sec.category + '</h3>'
+        + '<div class="other-interests-list">'
+        + sec.items.map(function(i) {
+            return '<span class="other-interest-tag">' + i + '</span>';
+          }).join('')
+        + '</div></div>';
+    });
+  }
 }
 
 /* ─── Footer ─────────────────────────────────────────────── */
@@ -293,14 +296,16 @@ function phoneIcon()  { return `<svg class="contact-icon" viewBox="0 0 20 20" fi
 function officeIcon() { return `<svg class="contact-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 18V7l6-4 6 4v11M9 18v-5h2v5"/></svg>`; }
 
 /* ─── Init ───────────────────────────────────────────────── */
-document.addEventListener('DOMContentLoaded', () => {
-  const run = (fn, label) => { try { fn(); } catch(e) { console.error(`[dossier] ${label}:`, e); } };
-  run(initNav,        'initNav');
-  run(renderHome,     'renderHome');
-  run(renderResearch, 'renderResearch');
-  run(renderGroup,    'renderGroup');
-  run(renderTeaching, 'renderTeaching');
-  run(renderInterests,'renderInterests');
-  run(renderFooter,   'renderFooter');
-  run(() => showSection('home'), 'showSection');
+document.addEventListener('DOMContentLoaded', function() {
+  function run(fn, label) {
+    try { fn(); } catch(e) { console.error('[dossier] ' + label + ':', e); }
+  }
+  run(initNav,         'initNav');
+  run(renderHome,      'renderHome');
+  run(renderResearch,  'renderResearch');
+  run(renderGroup,     'renderGroup');
+  run(renderTeaching,  'renderTeaching');
+  run(renderInterests, 'renderInterests');
+  run(renderFooter,    'renderFooter');
+  run(function(){ showSection('home'); }, 'showSection');
 });
