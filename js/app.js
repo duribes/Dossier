@@ -198,6 +198,7 @@ function renderMemberCard(m) {
           <div class="member-formation">${m.formation}</div>
         </div>
       </div>
+      ${m.description ? `<div class="member-desc">${m.description}</div>` : ''}
       <div class="member-email"><a href="mailto:${m.email}">${m.email}</a></div>
       ${links.length ? `
         <div class="member-links">
