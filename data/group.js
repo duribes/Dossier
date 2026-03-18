@@ -18,7 +18,7 @@ const GROUP_MEMBERS = [
     position: "Profesor Titular",
     formation: "MSc and PhD degrees from Colorado State University.",
     email: "framirez@uniandes.edu.co",
-    photo: "assets/members/prof_fernando_ramirez.jpg",
+    photo: "assets/members/prof_fernando_ramirez.png",
     googleScholar: " https://scholar.google.com/citations?hl=es&user=7RE9nmMAAAAJ",
     linkedin: "https://www.linkedin.com/in/usuario",
     cvlac: "https://scienti.minciencias.gov.co/cvlac/visualizador/generarCurriculoCv.do?cod_rh=0000774847",
