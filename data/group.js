@@ -14,18 +14,17 @@ var GROUP_INFO = {
 var GROUP_MEMBERS = [
   {
     id: 1,
-    name: "Dr. Nombre Apellido",
+    name: "Dr. Fernando Ramirez Rodriguez",
     position: "Profesor Titular",
     formation: "MSc and PhD degrees from Colorado State University.",
     description: "Dr. Fernando Ramirez is a Civil Engineer whose main area of expertise is Theoretical and Computational Mechanics. He earned his MSc and PhD degrees from Colorado State University. Dr Ramirez is currently a full professor at Universidad de los Andes in Colombia. His main topics of research include theoretical and computational mechanics, nanomechanics and biomechanics, structural mechanics, and composite and smart materials, among others. Dr. Ramirez has more tan 250 publications, including over 35 highly cited peer reviewed journal papers. Dr. Ramirez also has two international patents related to his biomechanics research.",
     email: "framirez@uniandes.edu.co",
     photo: "assets/members/prof_fernando_ramirez.png",
     googleScholar: "https://scholar.google.com/citations?hl=es&user=7RE9nmMAAAAJ",
-    linkedin: "https://www.linkedin.com/in/usuario",
+    linkedin: "https://www.linkedin.com/in/fernando-ramirez-763b1a17a/",
     cvlac: "https://scienti.minciencias.gov.co/cvlac/visualizador/generarCurriculoCv.do?cod_rh=0000774847",
     orcid: "https://orcid.org/0000-0001-5103-601X",
-    academia: "https://academia.uniandes.edu.co/AcademyCv/framirez",
-    researchgate: ""
+    academia: "https://academia.uniandes.edu.co/AcademyCv/framirez"
   },
   {
     id: 2,
