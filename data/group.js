@@ -24,7 +24,8 @@ var GROUP_MEMBERS = [
     linkedin: "https://www.linkedin.com/in/fernando-ramirez-763b1a17a/",
     cvlac: "https://scienti.minciencias.gov.co/cvlac/visualizador/generarCurriculoCv.do?cod_rh=0000774847",
     orcid: "https://orcid.org/0000-0001-5103-601X",
-    academia: "https://academia.uniandes.edu.co/AcademyCv/framirez"
+    academia: "https://academia.uniandes.edu.co/AcademyCv/framirez",
+    researchgate: ""
   },
   {
     id: 2,
