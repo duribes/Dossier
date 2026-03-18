@@ -180,12 +180,12 @@ function renderMemberCard(m) {
     : `<div class="member-photo-placeholder">${initials}</div>`;
 
   const links = [
-    { key: 'googleScholar', label: 'Scholar',     url: m.googleScholar },
-    { key: 'orcid',         label: 'ORCID',        url: m.orcid },
-    { key: 'researchgate',  label: 'ResearchGate', url: m.researchgate },
-    { key: 'cvlac',         label: 'CvLAC',        url: m.cvlac },
-    { key: 'linkedin',      label: 'LinkedIn',      url: m.linkedin },
-    { key: 'academia',      label: 'Academia',      url: m.academia },
+    { label: 'Scholar',     url: m.googleScholar  || '' },
+    { label: 'ORCID',       url: m.orcid          || '' },
+    { label: 'ResearchGate',url: m.researchgate   || '' },
+    { label: 'CvLAC',       url: m.cvlac          || '' },
+    { label: 'LinkedIn',    url: m.linkedin       || '' },
+    { label: 'Academia',    url: m.academia       || '' },
   ].filter(l => l.url);
 
   return `
