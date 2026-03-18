@@ -1,8 +1,9 @@
 // ============================================================
-// GRUPO DE INVESTIGACIÓN — Edita los miembros aquí
+// RESEARCH GROUP — Edit members here
+// IMPORTANT: ALL declarations must use "var", never "const" or "let"
 // ============================================================
 
-const GROUP_INFO = {
+var GROUP_INFO = {
   name: "Grupo de Investigación en Sistemas Complejos y Computación",
   acronym: "GISCC",
   classification: "Categoría A — Minciencias",
@@ -10,26 +11,28 @@ const GROUP_INFO = {
   description: "Somos un grupo interdisciplinario dedicado al estudio de sistemas complejos, computación científica y análisis de datos. Desarrollamos modelos y herramientas computacionales para entender fenómenos emergentes en sistemas sociales, biológicos y tecnológicos."
 };
 
-// Posiciones posibles: "Director", "Co-Director", "Investigador", "Estudiante Doctorado", "Estudiante Maestría", "Estudiante Pregrado", "Colaborador Externo"
-const GROUP_MEMBERS = [
+var GROUP_MEMBERS = [
   {
     id: 1,
     name: "Dr. Nombre Apellido",
     position: "Profesor Titular",
     formation: "MSc and PhD degrees from Colorado State University.",
+    description: "Short description about this member research focus, current projects, or academic background. Edit this field in group.js.",
     email: "framirez@uniandes.edu.co",
     photo: "assets/members/prof_fernando_ramirez.png",
-    googleScholar: " https://scholar.google.com/citations?hl=es&user=7RE9nmMAAAAJ",
+    googleScholar: "https://scholar.google.com/citations?hl=es&user=7RE9nmMAAAAJ",
     linkedin: "https://www.linkedin.com/in/usuario",
     cvlac: "https://scienti.minciencias.gov.co/cvlac/visualizador/generarCurriculoCv.do?cod_rh=0000774847",
     orcid: "https://orcid.org/0000-0001-5103-601X",
     academia: "https://academia.uniandes.edu.co/AcademyCv/framirez",
+    researchgate: ""
   },
   {
     id: 2,
     name: "Dra. Nombre Apellido",
-    position: "Investigadora",
+    position: "Researcher",
     formation: "PhD en Física, Universidad de los Andes (2015)",
+    description: "Short description about this member research focus, current projects, or academic background. Edit this field in group.js.",
     email: "nombre2.apellido@unal.edu.co",
     photo: "assets/members/member2.jpg",
     googleScholar: "https://scholar.google.com/citations?user=CODIGO2",
@@ -42,8 +45,9 @@ const GROUP_MEMBERS = [
   {
     id: 3,
     name: "Mg. Nombre Apellido",
-    position: "Estudiante Doctorado",
+    position: "PhD Student",
     formation: "MSc en Ingeniería de Sistemas, UNAL (2020)",
+    description: "Short description about this member research focus, current projects, or academic background. Edit this field in group.js.",
     email: "nombre3.apellido@unal.edu.co",
     photo: "assets/members/member3.jpg",
     googleScholar: "",
@@ -56,8 +60,9 @@ const GROUP_MEMBERS = [
   {
     id: 4,
     name: "Nombre Apellido",
-    position: "Estudiante Maestría",
+    position: "Master Student",
     formation: "Ing. de Sistemas, Universidad de Antioquia (2022)",
+    description: "Short description about this member research focus, current projects, or academic background. Edit this field in group.js.",
     email: "nombre4.apellido@unal.edu.co",
     photo: "assets/members/member4.jpg",
     googleScholar: "",
@@ -70,8 +75,9 @@ const GROUP_MEMBERS = [
   {
     id: 5,
     name: "Nombre Apellido",
-    position: "Colaborador Externo",
+    position: "External Collaborator",
     formation: "PhD en Matemáticas, Universidad de Barcelona (2012)",
+    description: "Short description about this member research focus, current projects, or academic background. Edit this field in group.js.",
     email: "colaborador@exterior.edu",
     photo: "assets/members/member5.jpg",
     googleScholar: "https://scholar.google.com/citations?user=CODIGO5",
