@@ -23,16 +23,16 @@ const RESEARCH_TOPICS = [
 
 // BibTeX de publicaciones — el campo "topic" debe coincidir con el id de RESEARCH_TOPICS
 const PUBLICATIONS_BIBTEX = `
-@article{apellido2024ml,
-  author    = {Apellido, Nombre and Coautor, Nombre},
-  title     = {A Machine Learning Approach for Spatial Data Analysis},
-  journal   = {Journal of Computational Science},
-  year      = {2024},
-  volume    = {45},
-  pages     = {101--115},
-  doi       = {10.1000/xyz123},
+@article{LuisAmigo_2024,
+  author    = {G.J. Posada-Hern\'andez and M. L\'opez-Bonilla and \textbf{D.A. Uribe-Su\'arez} and V. G\'omez-Ceballos and L.F. Cardona-Palacio},
+  title     = {Estimating the added value of critical reading competence in college students using statistical modeling},
+  journal   = {Revista de Investigación, Desarrollo e Innovación},
+  year      = {2025},
+  volume    = {15},
+  pages     = {67--86},
+  doi       = {},
   topic     = {topic1},
-  url       = {https://doi.org/10.1000/xyz123}
+  url       = {https://doi.org/10.19053/uptc.20278306.v15.n1.2025.18823}
 }
 
 @article{apellido2023complex,
