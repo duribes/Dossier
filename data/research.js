@@ -30,7 +30,6 @@ const PUBLICATIONS_BIBTEX = `
   year      = {2025},
   volume    = {15},
   pages     = {67--86},
-  doi       = {},
   topic     = {topic1},
   url       = {https://doi.org/10.19053/uptc.20278306.v15.n1.2025.18823}
 }
