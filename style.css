@@ -58,7 +58,8 @@ h1, h2, h3, h4, h5, h6,
 .footer-name, .footer-role, .footer-bottom,
 .footer-links-col h4, .footer-link-list,
 .other-interests-list, .group-meta,
-.section-rule { text-align: left; }
+.section-rule,
+.interest-card-title, .interest-section h3 { text-align: left; }
 
 /* ── Layout helpers ──────────────────────────────────────── */
 .container { max-width: var(--max-w); margin: 0 auto; padding: 0 2rem; }
