@@ -30,7 +30,7 @@ var GROUP_MEMBERS = [
   },
   {
     id: 2,
-    name: "Dra. Juan Sebastián Olarte",
+    name: "Juan Sebastián Olarte",
     position: "Master’s Student in Civil Engineering",
     formation: "BSc. Civil Engineering, Universidad de los Andes, Bogotá, Colombia, 2024",
     description: "is working on the project Virtual Element Method for Linear Elasticity Problems. This research applies the Virtual Element Method (VEM) to the elastic analysis of concrete, explicitly representing its heterogeneous composition, including aggregates and the cement matrix, in order to achieve a more accurate characterization of its mechanical behavior.",
@@ -43,14 +43,15 @@ var GROUP_MEMBERS = [
   },
   {
     id: 3,
-    name: "Mg. Nombre Apellido",
-    position: "PhD Student",
-    formation: "MSc en Ingeniería de Sistemas, UNAL (2020)",
-    description: "Short description about this member research focus, current projects, or academic background. Edit this field in group.js.",
-    email: "nombre3.apellido@unal.edu.co",
-    photo: "assets/members/Master_Student_Olarte.jpeg",
-    linkedin: "https://www.linkedin.com/in/usuario3",
-    orcid: "https://orcid.org/0000-0000-0000-0002"
+    name: "Carlos León",
+    position: "Undergraduate student",
+    formation: "BSc. Civil/Mechanical Engineering, Universidad de los Andes, Bogotá, Colombia, 2026",
+    description: "His project revolves around getting familiarized with the virtual element method such that I can comprehend and utilize VEM++, a C++ in-house virtual element library in order to design a specific application for linear elasticity problems.",
+    email: "c.leonp@uniandes.edu.co",
+    photo: "assets/members/Undergrad_Carlos_Leon.jpeg",
+    linkedin: "https://www.linkedin.com/in/carlos-andres-leon-puentes-984648372/",
+    orcid: "https://orcid.org/0000-0000-0000-0002",
+    researchgate: "https://www.researchgate.net/profile/Carlos-Leon-Puentes?ev=hdr_xprf"
   },
   {
     id: 4,
