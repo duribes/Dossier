@@ -50,7 +50,6 @@ var GROUP_MEMBERS = [
     email: "c.leonp@uniandes.edu.co",
     photo: "assets/members/Undergrad_Carlos_Leon.jpeg",
     linkedin: "https://www.linkedin.com/in/carlos-andres-leon-puentes-984648372/",
-    orcid: "https://orcid.org/0000-0000-0000-0002",
     researchgate: "https://www.researchgate.net/profile/Carlos-Leon-Puentes?ev=hdr_xprf"
   },
   {
