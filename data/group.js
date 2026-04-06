@@ -33,7 +33,7 @@ var GROUP_MEMBERS = [
     name: "Juan Sebastián Olarte",
     position: "Master’s Student in Civil Engineering",
     formation: "BSc. Civil Engineering, Universidad de los Andes, Bogotá, Colombia, 2024",
-    description: "is working on the project Virtual Element Method for Linear Elasticity Problems. This research applies the Virtual Element Method (VEM) to the elastic analysis of concrete, explicitly representing its heterogeneous composition, including aggregates and the cement matrix, in order to achieve a more accurate characterization of its mechanical behavior.",
+    description: "He is working on the project Virtual Element Method for Linear Elasticity Problems. This research applies the Virtual Element Method (VEM) to the elastic analysis of concrete, explicitly representing its heterogeneous composition, including aggregates and the cement matrix, in order to achieve a more accurate characterization of its mechanical behavior.",
     email: "j.olartem@uniandes.edu.co",
     photo: "assets/members/Master_Student_Olarte.jpeg",
     googleScholar: "",
