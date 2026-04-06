@@ -43,6 +43,19 @@ var GROUP_MEMBERS = [
   },
   {
     id: 3,
+    name: "Juan David Nuñez Rivera",
+    position: "Master’s Student",
+    formation: "BSc. Mechanical Engineering, Universidad de los Andes, Bogotá, Colombia, 2025<br>MSc. Mechanical Engineering, Universidad de los Andes, Bogotá, Colombia, 2026",
+    description: "He .............",
+    email: "j.nunezr@uniandes.edu.co",
+    photo: "assets/members/Master_Student_Olarte.jpeg",
+    googleScholar: "",
+    linkedin: "",
+    orcid: "",
+    researchgate: ""
+  },
+  {
+    id: 4,
     name: "Carlos León",
     position: "Undergraduate student",
     formation: "BSc. Civil Engineering, Universidad de los Andes, Bogotá, Colombia, 2026<br>BSc. Mechanical Engineering, Universidad de los Andes, Bogotá, Colombia, 2026",
@@ -53,17 +66,18 @@ var GROUP_MEMBERS = [
     researchgate: "https://www.researchgate.net/profile/Carlos-Leon-Puentes?ev=hdr_xprf"
   },
   {
-    id: 4,
-    name: "Nombre Apellido",
-    position: "Master Student",
-    formation: "Ing. de Sistemas, Universidad de Antioquia (2022)",
-    description: "Short description about this member research focus, current projects, or academic background. Edit this field in group.js.",
-    email: "nombre4.apellido@unal.edu.co",
-    photo: "assets/members/member4.jpg",
-    linkedin: "https://www.linkedin.com/in/usuario4"
+    id: 5,
+    name: "Tomás Palacios Muñoz",
+    position: "Undergraduate student",
+    formation: "BSc. Mechanical Engineering (Minor in Computational Mathematics), Universidad de los Andes, Bogotá, Colombia, 2027",    
+    description: "His ...................",
+    email: "t.palacios1@uniandes.edu.co",
+    photo: "assets/members/Undergrad_Tomas.JPG",
+    linkedin: "https://www.linkedin.com/in/tom%C3%A1s-palacios-mu%C3%B1oz-31006736b/",
+    researchgate: ""
   },
   {
-    id: 5,
+    id: 6,
     name: "Nombre Apellido",
     position: "External Collaborator",
     formation: "PhD en Matemáticas, Universidad de Barcelona (2012)",
