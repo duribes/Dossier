@@ -39,9 +39,26 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  text-align: justify;
 }
 img { max-width: 100%; display: block; }
 a { color: inherit; text-decoration: none; }
+
+/* Elements that should NOT be justified */
+h1, h2, h3, h4, h5, h6,
+.nav-brand, .nav-links, .nav-links a,
+.page-subtitle, .level-label,
+.home-title, .home-name, .home-institution,
+.member-name, .member-position,
+.course-code, .course-name, .course-header,
+.pub-year, .pub-type-badge, .pub-links,
+.social-icons, .social-btn,
+.member-links, .member-link,
+.pub-link, .topic-header h3,
+.footer-name, .footer-role, .footer-bottom,
+.footer-links-col h4, .footer-link-list,
+.other-interests-list, .group-meta,
+.section-rule { text-align: left; }
 
 /* ── Layout helpers ──────────────────────────────────────── */
 .container { max-width: var(--max-w); margin: 0 auto; padding: 0 2rem; }
