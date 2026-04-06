@@ -7,9 +7,9 @@
 
 var GROUP_INFO = {
   name: "Diego Uribe-Suárez´s Group",
-  acronym: "",
-  classification: "",
-  founded: "2026",
+  //acronym: "",
+  //classification: "",
+  //founded: "2026",
   description: "Our research group focuses on computational mechanics and numerical simulation of advanced materials and engineering systems. We develop and apply methods such as the Finite Element Method, Virtual Element Method, and Material Point Method to study complex mechanical behavior, including heterogeneous and functionally graded materials. The group combines mathematical modeling, high-performance computing, and experimental collaboration to address challenges in solid mechanics and materials engineering."
 };
 
