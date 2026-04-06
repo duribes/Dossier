@@ -48,7 +48,7 @@ var GROUP_MEMBERS = [
     formation: "MSc en Ingeniería de Sistemas, UNAL (2020)",
     description: "Short description about this member research focus, current projects, or academic background. Edit this field in group.js.",
     email: "nombre3.apellido@unal.edu.co",
-    photo: "assets/members/member3.jpg",
+    photo: "assets/members/Master_Student_Olarte.jpeg",
     linkedin: "https://www.linkedin.com/in/usuario3",
     orcid: "https://orcid.org/0000-0000-0000-0002"
   },
