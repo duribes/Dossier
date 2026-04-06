@@ -31,7 +31,7 @@ const PUBLICATIONS_BIBTEX = `
   volume    = {15},
   pages     = {67--86},
   topic     = {topic1},
-  doi       = {https://doi.org/10.19053/uptc.20278306.v15.n1.2025.18823}
+  doi = {10.19053/uptc.20278306.v15.n1.2025.18823}
 }
 
 @article{apellido2023complex,
