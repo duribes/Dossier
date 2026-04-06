@@ -371,7 +371,7 @@ h1, h2, h3, h4, h5, h6,
 
 .members-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(440px, 1fr));
   gap: 1.5rem;
 }
 .member-card {
@@ -621,8 +621,7 @@ footer {
   .home-photo, .home-photo-placeholder { aspect-ratio: 1/1; max-width: 200px; }
 
   .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
-  .members-grid { grid-template-columns: 1fr; }
-  .courses-grid { grid-template-columns: 1fr; }
+  .members-grid { grid-template-columns: 1fr; }  .courses-grid { grid-template-columns: 1fr; }
   .interests-cards { grid-template-columns: 1fr; }
   .section { padding: 3rem 0; }
 }
