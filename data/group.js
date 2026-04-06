@@ -6,11 +6,11 @@
 // ============================================================
 
 var GROUP_INFO = {
-  name: "Grupo de Investigación en Sistemas Complejos y Computación",
-  acronym: "GISCC",
-  classification: "Categoría A — Minciencias",
-  founded: "2010",
-  description: "Somos un grupo interdisciplinario dedicado al estudio de sistemas complejos, computación científica y análisis de datos. Desarrollamos modelos y herramientas computacionales para entender fenómenos emergentes en sistemas sociales, biológicos y tecnológicos."
+  name: "Diego Uribe-Suárez´s Group",
+  acronym: "",
+  classification: "",
+  founded: "2026",
+  description: "Our research group focuses on computational mechanics and numerical simulation of advanced materials and engineering systems. We develop and apply methods such as the Finite Element Method, Virtual Element Method, and Material Point Method to study complex mechanical behavior, including heterogeneous and functionally graded materials. The group combines mathematical modeling, high-performance computing, and experimental collaboration to address challenges in solid mechanics and materials engineering."
 };
 
 var GROUP_MEMBERS = [
