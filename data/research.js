@@ -24,7 +24,7 @@ const RESEARCH_TOPICS = [
 // BibTeX de publicaciones — el campo "topic" debe coincidir con el id de RESEARCH_TOPICS
 const PUBLICATIONS_BIBTEX = `
 @article{LuisAmigo_2024,
-  author    = {G.J. Posada-Hernández and M. López-Bonilla and {{D.A. Uribe-Suárez}} and V. Gómez-Ceballos and L.F. Cardona-Palacio},
+  author    = {G.J. Posada-Hernández and M. López-Bonilla and {\\bf D.A. Uribe-Suárez} and V. Gómez-Ceballos and L.F. Cardona-Palacio},
   title     = {Estimating the added value of critical reading competence in college students using statistical modeling},
   journal   = {Revista de Investigación, Desarrollo e Innovación},
   year      = {2025},
