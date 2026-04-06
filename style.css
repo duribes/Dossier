@@ -404,7 +404,7 @@ a { color: inherit; text-decoration: none; }
   margin-bottom: 0.15rem;
 }
 .member-formation { font-size: 0.8rem; color: var(--ink-light); line-height: 1.4; }
-.member-desc { font-size: 0.83rem; color: var(--ink-light); line-height: 1.6; margin-bottom: 0.75rem; padding-top: 0.75rem; border-top: 1px solid var(--rule); }
+.member-desc { font-size: 0.83rem; color: var(--ink-light); line-height: 1.6; margin-bottom: 0.75rem; padding-top: 0.75rem; border-top: 1px solid var(--rule); text-align: justify; }
 .member-email { font-size: 0.82rem; color: var(--ink-light); margin-bottom: 1rem; }
 .member-email a:hover { color: var(--accent); }
 .member-links {
