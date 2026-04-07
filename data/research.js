@@ -48,6 +48,22 @@ const PUBLICATIONS_BIBTEX = `
 	topic     = {topic1}
 }
 
+@article{UribeApplicationComets2020,
+	author = {D. Uribe-Suárez and M. Delbo and P.-O. Bouchard and D. Pino-Muñoz},
+	title = {Diurnal temperature variation as the source of the preferential direction of fractures on asteroids: Theoretical model for the case of Bennu},
+	journal = {Icarus},
+	volume = {360},
+	pages = {114347},
+	year = {2021},
+	issn = {0019-1035},
+	doi = {https://doi.org/10.1016/j.icarus.2021.114347},
+	url = {https://www.sciencedirect.com/science/article/pii/S0019103521000440},
+	topic     = {topic1}
+}
+
+
+
+
 
 
 
