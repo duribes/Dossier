@@ -1,154 +1,142 @@
-// ============================================================
-// PUBLICACIONES — Formato BibTeX agrupado por tema
-// Agrega o edita entradas directamente aquí
-// ============================================================
+var RESEARCH_TOPICS = [];
 
-const RESEARCH_TOPICS = [
-  {
-    id: "topic1",
-    title: "Aprendizaje Automático y Datos Espaciales",
-    description: "Investigación sobre métodos de machine learning aplicados a datos geoespaciales y análisis territorial."
-  },
-  {
-    id: "topic2",
-    title: "Modelado y Simulación de Sistemas Complejos",
-    description: "Desarrollo de modelos computacionales para la simulación de fenómenos físicos y sociales complejos."
-  },
-  {
-    id: "topic3",
-    title: "Análisis de Redes y Grafos",
-    description: "Estudio de estructuras de red en sistemas sociales, biológicos y tecnológicos."
-  }
-];
-
-// BibTeX de publicaciones — el campo "topic" debe coincidir con el id de RESEARCH_TOPICS
-const PUBLICATIONS_BIBTEX = `
-@article{LuisAmigo_2024,
-  author    = {G.J. Posada-Hernández and M. López-Bonilla and D.A. Uribe-Suárez and V. Gómez-Ceballos and L.F. Cardona-Palacio},
-  title     = {Estimating the added value of critical reading competence in college students using statistical modeling},
-  journal   = {Revista de Investigación, Desarrollo e Innovación},
-  year      = {2025},
-  ISSN = {2027-8306},
-  volume    = {15},
-  pages     = {67--86},
-  doi = {10.19053/uptc.20278306.v15.n1.2025.18823},
-  topic     = {topic1}
+var PUBLICATIONS_BIBTEX = `
+@article{LuisAmigo_2023,
+  title = {Analysis of the added value for the quantitative reasoning competency at the Luis Amigó Catholic University in 2021},
+  journal = {Revista de Investigación, Desarrollo e Innovación},
+  volume = {13},
+  issue = {2},
+  pages = {329-344},
+  year = {2023},
+  issn = {2027-8306},
+  url = {https://doi.org/10.19053/20278306.v13.n2.2023.16838},
+  author = {G.J. Posada-Hernández and M. López-Bonilla and D.A. Uribe-Suárez and V and L.F. Cardona-Palacio}
 }
 
-@article{LuisAmigo_2023,
-	author = {G.J. Posada-Hernández and M. López-Bonilla and D.A. Uribe-Suárez and V. Gómez-Ceballos and L.F. Cardona-Palacio},
-	title = {Analysis of the added value for the quantitative reasoning competency at the Luis Amigó Catholic University in 2021},
-	journal = {Revista de Investigación, Desarrollo e Innovación},
-	volume = {13},
-	issue  ={2},
-	pages = {329-344},
-	year = {2023},
-	issn = {2027-8306},
-	doi = {10.19053/20278306.v13.n2.2023.16838},
-	topic     = {topic1}
+@article{LuisAmigo_2024,
+  title = {Estimating the added value of critical reading competence in college students using statistical modeling},
+  journal = {Revista de Investigación, Desarrollo e Innovación},
+  volume = {15},
+  year = {2025},
+  issn = {2027-8306},
+  month = {06},
+  pages = {67-86},
+  url = {https://doi.org/10.19053/uptc.20278306.v15.n1.2025.18823},
+  author = {G.J. Posada-Hernández and M. López-Bonilla and D.A. Uribe-Suárez and V. Gómez-Ceballos and L.F. Cardona-Palacio}
+}
+
+@article{Uribe2020,
+  title = {Numerical modeling of crack propagation with dynamic insertion of cohesive elements},
+  journal = {Engineering Fracture Mechanics},
+  volume = {227},
+  pages = {106918},
+  year = {2020},
+  issn = {0013-7944},
+  doi = {https://doi.org/10.1016/j.engfracmech.2020.106918},
+  url = {http://www.sciencedirect.com/science/article/pii/S0013794419309324},
+  author = {D.A. Uribe-Suárez and P.-O. Bouchard and M. Delbo and D. Pino-Muñoz}
 }
 
 @article{UribeApplicationComets2020,
-	author = {D. Uribe-Suárez and M. Delbo and P.-O. Bouchard and D. Pino-Muñoz},
-	title = {Diurnal temperature variation as the source of the preferential direction of fractures on asteroids: Theoretical model for the case of Bennu},
-	journal = {Icarus},
-	volume = {360},
-	pages = {114347},
-	year = {2021},
-	issn = {0019-1035},
-	doi = {https://doi.org/10.1016/j.icarus.2021.114347},
-	url = {https://www.sciencedirect.com/science/article/pii/S0019103521000440},
-	topic     = {topic1}
+  title = {Diurnal temperature variation as the source of the preferential direction of fractures on asteroids: Theoretical model for the case of Bennu},
+  journal = {Icarus},
+  volume = {360},
+  pages = {114347},
+  year = {2021},
+  issn = {0019-1035},
+  doi = {https://doi.org/10.1016/j.icarus.2021.114347},
+  url = {https://www.sciencedirect.com/science/article/pii/S0019103521000440},
+  author = {D.A. Uribe-Suárez and M. Delbo and P.-O. Bouchard and D. Pino-Muñoz}
 }
 
-
-
-
-
-
-
-
-@article{apellido2023complex,
-  author    = {Apellido, Nombre and Otro, Autor},
-  title     = {Simulation of Complex Systems Using Agent-Based Models},
-  journal   = {Physica A: Statistical Mechanics and its Applications},
-  year      = {2023},
-  volume    = {612},
-  pages     = {128--145},
-  doi       = {10.1016/j.physa.2023.128},
-  topic     = {topic2}
+@article{UTSA2017,
+  title = {A multi-scale approach to describe electrical impulses propagating along actin filaments in both intracellular and in vitro conditions},
+  author = {Christian Hunley and D.A. Uribe Suárez and Marcelo Marucho},
+  journal = {RSC Adv.},
+  year = {2018},
+  volume = {8},
+  issue = {22},
+  pages = {12017-12028},
+  publisher = {The Royal Society of Chemistry},
+  doi = {10.1039/C7RA12799E},
+  url = {http://dx.doi.org/10.1039/C7RA12799E}
 }
 
-@inproceedings{apellido2023networks,
-  author    = {Apellido, Nombre},
-  title     = {Graph Neural Networks for Social Network Analysis},
-  booktitle = {Proceedings of the International Conference on Network Science},
-  year      = {2023},
-  pages     = {45--58},
-  publisher = {Springer},
-  topic     = {topic3}
+@article{CIOH20151,
+  title = {Modelamiento matemático de la dinámica marina en la región de Cartagena},
+  author = {D.A. Uribe Suárez and Escobar Sierra, C. A. and Ruiz Sarrázola, D. A.},
+  year = {2015},
+  issue = {33},
+  pages = {69-86},
+  url = {https://doi.org/10.26640/22159045.279},
+  issn = {2215-9045},
+  journal = {Boletín Científico CIOH}
 }
 
-@article{apellido2022spatial,
-  author    = {Apellido, Nombre and Coautor2, Nombre},
-  title     = {Spatial Clustering Algorithms: A Comparative Study},
-  journal   = {Computers, Environment and Urban Systems},
-  year      = {2022},
-  volume    = {98},
-  pages     = {101847},
-  topic     = {topic1}
-}
-
-@book{apellido2022book,
-  author    = {Apellido, Nombre},
-  title     = {Introduction to Computational Social Science},
-  publisher = {Editorial Universitaria},
-  year      = {2022},
-  address   = {Bogotá, Colombia},
-  isbn      = {978-0-000-00000-0},
-  topic     = {topic2}
+@article{CIOH20152,
+  title = {Forzamientos marinos en fronteras abiertas de modelos costeros de pequeña escala, Cartagena},
+  author = {Ruiz Sarrázola, D. A. and Escobar Sierra, C. A. and D.A. Uribe Suárez},
+  year = {2015},
+  issue = {33},
+  pages = {53-68},
+  url = {https://doi.org/10.26640/22159045.278},
+  issn = {2215-9045},
+  journal = {Boletín Científico CIOH}
 }
 `;
 
-// ============================================================
-// TALKS / CONFERENCIAS
-// ============================================================
-
-const TALKS_BIBTEX = `
-@misc{talk2024isi,
-  author    = {Apellido, Nombre},
-  title     = {Advances in Spatial Machine Learning for Urban Systems},
-  howpublished = {Keynote, International Symposium on Informatics},
-  year      = {2024},
-  month     = {September},
-  address   = {Berlín, Alemania},
-  url       = {https://example.com/talk2024}
+var TALKS_BIBTEX = `
+@inproceedings{PosterUTSA2017,
+  title = {A Multi-Scale Model to Investigate Nonlinear Dispersive Electrical Impulse Propagation along Cytoskeleton Filaments},
+  author = {Christian Hunley and D.A. Uribe Suárez and Marcelo Marucho},
+  booktitle = {College of Sciences Research Conference},
+  organization = {The University of Texas at San Antonio (UTSA)},
+  year = {2017},
+  address = {San Antonio, Texas, USA}
 }
 
-@misc{talk2023netscix,
-  author    = {Apellido, Nombre},
-  title     = {Community Detection in Temporal Networks},
-  howpublished = {Invited Talk, NetSci-X Conference},
-  year      = {2023},
-  month     = {January},
-  address   = {Buenos Aires, Argentina}
+@inproceedings{ColloquePNP2018,
+  title = {Crack Propagation Criteria and Dynamic Insertion of Cohesive Elements Applied to Thermal Fatigue Failure of Comets/Asteroids},
+  author = {D.A. Uribe Suárez and Pierre-Olivier Bouchard and D. Pino-Muñoz and Marco Delbo},
+  booktitle = {Colloque Quadriennal de Bilan et Prospective Programme national de Planétologie},
+  organization = {Université Côte d'Azur and Observatoire de la Côte d'Azur},
+  year = {2018},
+  address = {Nice, France}
 }
 
-@misc{talk2023unal,
-  author    = {Apellido, Nombre},
-  title     = {Modelado basado en agentes para políticas públicas},
-  howpublished = {Seminario de Investigación, Universidad Nacional de Colombia},
-  year      = {2023},
-  month     = {March},
-  address   = {Medellín, Colombia}
+@inproceedings{SeminarioCIOH2014,
+  title = {Evaluation of Sources of Atmospheric Information in the Caribbean},
+  author = {D.A. Uribe Suárez and Escobar Sierra, C. A.},
+  booktitle = {Nuevos conocimientos y herramientas para el estudio de la erosión costera entre Galerazamba y Cartagena},
+  organization = {Centro de Investigaciones Oceanográficas e Hidrográficas del Caribe (CIOH)},
+  year = {2014},
+  address = {Cartagena de Indias, Bolivar, Colombia}
 }
 
-@misc{talk2022somsi,
-  author    = {Apellido, Nombre},
-  title     = {Data-Driven Approaches to Complex System Modeling},
-  howpublished = {Panel, Simposio de Modelado y Simulación},
-  year      = {2022},
-  month     = {November},
-  address   = {Cali, Colombia}
+@inproceedings{CFRAC2019,
+  title = {Mesh-independent Crack Propagation under Mixed-Mode Loading using Remeshing and Dynamic Insertion of Cohesive Elements},
+  author = {D. Uribe and D. Pino-Muñoz and M. Delbo and P.-O. Bouchard},
+  booktitle = {VI International Conference on Computational Modeling of Fracture and Failure of Materials and Structures (CFRAC 2019)},
+  organization = {ECCOMAS Thematic Conference},
+  year = {2019},
+  address = {Braunschweig, Germany}
+}
+
+@inproceedings{MECAMAT2019,
+  title = {Towards a crack propagation criterion and dynamic insertion of cohesive elements applied to thermal fatigue failure of comets/asteroids},
+  author = {D.A. Uribe Suárez and Pierre-Olivier Bouchard and D. Pino-Muñoz and Marco Delbo},
+  booktitle = {Colloque National Mécamat-Rupture des Matériaux et des Structures},
+  organization = {L'association MECAMAT},
+  year = {2019},
+  address = {Aussois, France}
+}
+
+@inproceedings{ColloqueDoctorants2019,
+  title = {Mesh-independent Crack Propagation under Mixed-Mode Loading using Remeshing and Dynamic Insertion of Cohesive Elements},
+  author = {D. Uribe and D. Pino-Muñoz and Marco Delbo and Pierre-Olivier Bouchard},
+  booktitle = {Colloque des doctorants en 2ème année de l'EDSFA},
+  organization = {École doctorale Sciences Fondamentales et Appliquées},
+  year = {2019},
+  address = {Sophia Antipolis, France}
 }
 `;
