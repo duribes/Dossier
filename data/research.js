@@ -9,7 +9,7 @@ var PUBLICATIONS_BIBTEX = `
   pages = {329-344},
   year = {2023},
   issn = {2027-8306},
-  url = {https://doi.org/10.19053/20278306.v13.n2.2023.16838},
+  doi = {https://doi.org/10.19053/20278306.v13.n2.2023.16838},
   author = {G.J. Posada-Hernández and M. López-Bonilla and D.A. Uribe-Suárez and V and L.F. Cardona-Palacio}
 }
 
@@ -21,7 +21,7 @@ var PUBLICATIONS_BIBTEX = `
   issn = {2027-8306},
   month = {06},
   pages = {67-86},
-  url = {https://doi.org/10.19053/uptc.20278306.v15.n1.2025.18823},
+  doi = {https://doi.org/10.19053/uptc.20278306.v15.n1.2025.18823},
   author = {G.J. Posada-Hernández and M. López-Bonilla and D.A. Uribe-Suárez and V. Gómez-Ceballos and L.F. Cardona-Palacio}
 }
 
@@ -68,7 +68,7 @@ var PUBLICATIONS_BIBTEX = `
   year = {2015},
   issue = {33},
   pages = {69-86},
-  url = {https://doi.org/10.26640/22159045.279},
+  doi = {https://doi.org/10.26640/22159045.279},
   issn = {2215-9045},
   journal = {Boletín Científico CIOH}
 }
@@ -79,7 +79,7 @@ var PUBLICATIONS_BIBTEX = `
   year = {2015},
   issue = {33},
   pages = {53-68},
-  url = {https://doi.org/10.26640/22159045.278},
+  doi = {https://doi.org/10.26640/22159045.278},
   issn = {2215-9045},
   journal = {Boletín Científico CIOH}
 }
