@@ -16,6 +16,24 @@ var GROUP_INFO = {
 var GROUP_MEMBERS = [
   {
     id: 1,
+    name: "Dr. Diego Uribe-Suárez",
+    position: "Postdoctoral Researcher",    
+    formation: "Computational Mechanics and Materials, Colorado State University, USA, 2006<br>MSc. Civil Engineering, Colorado State University, USA, 2002<br>BSc. Civil Engineering, UNIVERSIDAD EIA, Medellín, Colombia, 1993",
+    
+    
+    
+    
+    description: "Dr. Fernando Ramirez is a Civil Engineer whose main area of expertise is Theoretical and Computational Mechanics. He earned his MSc and PhD degrees from Colorado State University. Dr Ramirez is currently a full professor at Universidad de los Andes in Colombia. His main topics of research include theoretical and computational mechanics, nanomechanics and biomechanics, structural mechanics, and composite and smart materials, among others. Dr. Ramirez has more than 250 publications, including over 35 highly cited peer reviewed journal papers. Dr. Ramirez also has two international patents related to his biomechanics research.",
+    email: "framirez@uniandes.edu.co",
+    photo: "assets/members/prof_fernando_ramirez.png",
+    googleScholar: "https://scholar.google.com/citations?hl=es&user=7RE9nmMAAAAJ",
+    linkedin: "https://www.linkedin.com/in/fernando-ramirez-763b1a17a/",
+    cvlac: "https://scienti.minciencias.gov.co/cvlac/visualizador/generarCurriculoCv.do?cod_rh=0000774847",
+    orcid: "https://orcid.org/0000-0001-5103-601X",
+    academia: "https://academia.uniandes.edu.co/AcademyCv/framirez"
+  },
+  {
+    id: 2,
     name: "Dr. Fernando Ramirez Rodriguez",
     position: "Full Professor",    
     formation: "PhD. Civil Engineering, Colorado State University, USA, 2006<br>MSc. Civil Engineering, Colorado State University, USA, 2002<br>BSc. Civil Engineering, UNIVERSIDAD EIA, Medellín, Colombia, 1993",
@@ -29,7 +47,7 @@ var GROUP_MEMBERS = [
     academia: "https://academia.uniandes.edu.co/AcademyCv/framirez"
   },
   {
-    id: 2,
+    id: 3,
     name: "Juan Sebastián Olarte",
     position: "Master’s Student",
     formation: "BSc. Civil Engineering, Universidad de los Andes, Bogotá, Colombia, 2024<br>MSc. Civil Engineering, Universidad de los Andes, Bogotá, Colombia, 2026",
@@ -42,7 +60,7 @@ var GROUP_MEMBERS = [
     researchgate: ""
   },
   {
-    id: 3,
+    id: 4,
     name: "Juan David Nuñez Rivera",
     position: "Master’s Student",
     formation: "BSc. Mechanical Engineering, Universidad de los Andes, Bogotá, Colombia, 2025<br>MSc. Mechanical Engineering, Universidad de los Andes, Bogotá, Colombia, 2026",
@@ -57,7 +75,7 @@ var GROUP_MEMBERS = [
 
 
   {
-    id: 4,
+    id: 5,
     name: "Alejandro Guerrero Caicedo",
     position: "Master’s Student",
     formation: "BSc. Mechanical Engineering, Universidad de los Andes, Bogotá, Colombia, 2025<br>MSc. Mechanical Engineering, Universidad de los Andes, Bogotá, Colombia, 2027",
@@ -70,7 +88,7 @@ var GROUP_MEMBERS = [
     researchgate: ""
   },
   {
-    id: 5,
+    id: 6,
     name: "Santiago Gonzalez Buenaventura",
     position: "Master’s Student",
     formation: "BSc. Mechanical Engineering, Universidad de los Andes, Bogotá, Colombia, 2024<br>MSc. Mechanical Engineering, Universidad de los Andes, Bogotá, Colombia, 2026",
@@ -91,7 +109,7 @@ var GROUP_MEMBERS = [
 
   
   {
-    id: 6,
+    id: 7,
     name: "Carlos León",
     position: "Undergraduate student",
     formation: "BSc. Civil Engineering, Universidad de los Andes, Bogotá, Colombia, 2026<br>BSc. Mechanical Engineering, Universidad de los Andes, Bogotá, Colombia, 2026",
@@ -102,7 +120,7 @@ var GROUP_MEMBERS = [
     researchgate: "https://www.researchgate.net/profile/Carlos-Leon-Puentes?ev=hdr_xprf"
   },
   {
-    id: 7,
+    id: 8,
     name: "Tomás Palacios Muñoz",
     position: "Undergraduate student",
     formation: "BSc. Mechanical Engineering (Minor in Computational Mathematics), Universidad de los Andes, Bogotá, Colombia, 2027",    
@@ -113,7 +131,7 @@ var GROUP_MEMBERS = [
     researchgate: ""
   },
   {
-    id: 8,
+    id: 9,
     name: "Nombre Apellido",
     position: "External Collaborator",
     formation: "PhD en Matemáticas, Universidad de Barcelona (2012)",
