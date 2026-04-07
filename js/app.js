@@ -213,7 +213,7 @@ function renderPubItem(e) {
     + '</div>';
 }
 
-function renderTalkItem(e) {
+/*function renderTalkItem(e) {
   return '<div class="talk-item">'
     + '<span class="pub-year">' + (e.year || '—') + '</span>'
     + '<div>'
@@ -223,7 +223,24 @@ function renderTalkItem(e) {
     + (e.url ? '<div class="pub-links"><a href="' + e.url + '" class="pub-link" target="_blank" rel="noopener">Link</a></div>' : '')
     + '</div>'
     + '</div>';
+}*/
+function renderTalkItem(e) {
+
+  var authors = e.author || '';
+  var title = e.title || '';
+  var book = e.booktitle || '';
+  var org = e.organization || '';
+  var address = e.address || '';
+  var year = e.year || '';
+  
+  return `     <div class="pub-item">       <div></div>       <div>
+          ${authors}. 
+          ${title}. 
+          In ${book}${address ? ', ' + address : ''}${year ? ', ' + year : ''}. 
+          ${org}       </div>     </div>
+    `;
 }
+
 
 /* ─── Research Group ─────────────────────────────────────── */
 function renderGroup() {
