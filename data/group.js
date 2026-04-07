@@ -54,8 +54,44 @@ var GROUP_MEMBERS = [
     orcid: "",
     researchgate: ""
   },
+
+
   {
     id: 4,
+    name: "Alejandro Guerrero Caicedo",
+    position: "Master’s Student",
+    formation: "BSc. Mechanical Engineering, Universidad de los Andes, Bogotá, Colombia, 2025<br>MSc. Mechanical Engineering, Universidad de los Andes, Bogotá, Colombia, 2027",
+    description: "He .......",
+    email: "a.guerreroc23@uniandes.edu.co",
+    photo: "assets/members/Master_Guerrero.jpeg",
+    googleScholar: "",
+    linkedin: "https://www.linkedin.com/in/alejandro-guerrero-caicedo-2822262a2/",
+    orcid: "",
+    researchgate: ""
+  },
+  {
+    id: 5,
+    name: "Santiago Gonzalez Buenaventura",
+    position: "Master’s Student",
+    formation: "BSc. Mechanical Engineering, Universidad de los Andes, Bogotá, Colombia, 2024<br>MSc. Mechanical Engineering, Universidad de los Andes, Bogotá, Colombia, 2026",
+    description: "He .......",
+    email: "s.gonzalez32@uniandes.edu.co",
+    photo: "assets/members/Master_Student_Olarte.jpeg",
+    googleScholar: "",
+    linkedin: "https://www.linkedin.com/in/s-gonzalez-buenaventura/",
+    orcid: "",
+    researchgate: ""
+  },
+
+
+
+
+
+
+
+  
+  {
+    id: 6,
     name: "Carlos León",
     position: "Undergraduate student",
     formation: "BSc. Civil Engineering, Universidad de los Andes, Bogotá, Colombia, 2026<br>BSc. Mechanical Engineering, Universidad de los Andes, Bogotá, Colombia, 2026",
@@ -66,7 +102,7 @@ var GROUP_MEMBERS = [
     researchgate: "https://www.researchgate.net/profile/Carlos-Leon-Puentes?ev=hdr_xprf"
   },
   {
-    id: 5,
+    id: 7,
     name: "Tomás Palacios Muñoz",
     position: "Undergraduate student",
     formation: "BSc. Mechanical Engineering (Minor in Computational Mathematics), Universidad de los Andes, Bogotá, Colombia, 2027",    
@@ -77,7 +113,7 @@ var GROUP_MEMBERS = [
     researchgate: ""
   },
   {
-    id: 6,
+    id: 8,
     name: "Nombre Apellido",
     position: "External Collaborator",
     formation: "PhD en Matemáticas, Universidad de Barcelona (2012)",
