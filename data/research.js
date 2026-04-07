@@ -100,15 +100,15 @@ note = {Presentation}
 
 
 @inproceedings{CFRAC2019,
-title = {Mesh-independent Crack Propagation under Mixed-Mode Loading using Remeshing and Dynamic Insertion of Cohesive Elements},
-author = {D. Uribe and D. Pino-Muñoz and M. Delbo and P.-O. Bouchard},
-booktitle = {VI International Conference on Computational Modeling of Fracture and Failure of Materials and Structures (CFRAC 2019)},
-organization = {ECCOMAS Thematic Conference},
-address = {Braunschweig, Germany},
-month = {June},
-day = {12-14},
-year = {2019},
-note = {Presentation}
+  title = {Mesh-independent Crack Propagation under Mixed-Mode Loading using Remeshing and Dynamic Insertion of Cohesive Elements},
+  author = {D. Uribe and D. Pino-Muñoz and M. Delbo and P.-O. Bouchard},
+  booktitle = {VI International Conference on Computational Modeling of Fracture and Failure of Materials and Structures (CFRAC 2019)},
+  organization = {ECCOMAS Thematic Conference},
+  address = {Braunschweig, Germany},
+  month = {June},
+  day = {12-14},
+  year = {2019},
+  note = {Presentation}
 }
 
 `;
