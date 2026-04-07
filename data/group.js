@@ -72,9 +72,9 @@ var GROUP_MEMBERS = [
   {
     id: 5,
     name: "Alejandro Guerrero Caicedo",
-    position: "Master’s Student",
+    position: "Master’s Student (Research Project)",
     formation: "BSc. Mechanical Engineering, Universidad de los Andes, Bogotá, Colombia, 2025<br>MSc. Mechanical Engineering, Universidad de los Andes, Bogotá, Colombia, 2027",
-    description: "He .......",
+    description: "He is working on a small research project with the group, separate from his MSc thesis work. .......",
     email: "a.guerreroc23@uniandes.edu.co",
     photo: "assets/members/Master_Guerrero.jpeg",
     googleScholar: "",
@@ -85,9 +85,9 @@ var GROUP_MEMBERS = [
   {
     id: 6,
     name: "Santiago Gonzalez Buenaventura",
-    position: "Master’s Student",
+    position: "Master’s Student (Research Project)",
     formation: "BSc. Mechanical Engineering, Universidad de los Andes, Bogotá, Colombia, 2024<br>MSc. Mechanical Engineering, Universidad de los Andes, Bogotá, Colombia, 2026",
-    description: "He .......",
+    description: "He is working on a small research project with the group, separate from his MSc thesis work. .......",
     email: "s.gonzalez32@uniandes.edu.co",
     photo: "assets/members/Master_Student_Olarte.jpeg",
     googleScholar: "",
