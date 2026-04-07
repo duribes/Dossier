@@ -409,16 +409,16 @@ h1, h2, h3, h4, h5, h6,
 }
 .member-header { display: flex; gap: 1.2rem; margin-bottom: 1.25rem; align-items: flex-start; }
 .member-photo {
-  width: 115px;
-  height: 115px;
+  width: 130px;
+  height: 130px;
   object-fit: cover;
   border-radius: 50%;
   border: 1px solid var(--rule);
   flex-shrink: 0;
 }
 .member-photo-placeholder {
-  width: 115px;
-  height: 115px;
+  width: 130px;
+  height: 130px;
   border-radius: 50%;
   background: var(--paper-3);
   border: 1px solid var(--rule);
@@ -426,7 +426,7 @@ h1, h2, h3, h4, h5, h6,
   align-items: center;
   justify-content: center;
   font-family: var(--font-serif);
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   color: var(--ink-faint);
   flex-shrink: 0;
 }
