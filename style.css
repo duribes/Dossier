@@ -407,18 +407,18 @@ h1, h2, h3, h4, h5, h6,
   box-shadow: 0 4px 20px rgba(0,0,0,0.06);
   border-color: var(--paper-3);
 }
-.member-header { display: flex; gap: 1rem; margin-bottom: 1.25rem; align-items: flex-start; }
+.member-header { display: flex; gap: 1.2rem; margin-bottom: 1.25rem; align-items: flex-start; }
 .member-photo {
-  width: 60px;
-  height: 60px;
+  width: 95px;
+  height: 95px;
   object-fit: cover;
   border-radius: 50%;
   border: 1px solid var(--rule);
   flex-shrink: 0;
 }
 .member-photo-placeholder {
-  width: 60px;
-  height: 60px;
+  width: 95px;
+  height: 95px;
   border-radius: 50%;
   background: var(--paper-3);
   border: 1px solid var(--rule);
@@ -426,7 +426,7 @@ h1, h2, h3, h4, h5, h6,
   align-items: center;
   justify-content: center;
   font-family: var(--font-serif);
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   color: var(--ink-faint);
   flex-shrink: 0;
 }
