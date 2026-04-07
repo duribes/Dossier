@@ -165,16 +165,37 @@ function renderPubItem(e) {
 }
 
 function renderTalkItem(e) {
-  return '<div class="talk-item">'
-    + '<span class="pub-year">' + (e.year || '—') + '</span>'
-    + '<div>'
-    + '<div class="talk-title">' + (e.title || '') + '</div>'
-    + '<div class="talk-venue">' + (e.howpublished || '') + '</div>'
-    + '<div class="talk-location">' + (e.address || '') + (e.month ? ' · ' + e.month : '') + '</div>'
-    + (e.url ? '<div class="pub-links"><a href="' + e.url + '" class="pub-link" target="_blank" rel="noopener">Link</a></div>' : '')
-    + '</div>'
-    + '</div>';
+
+function formatDate(day, month, year) {
+if (!year) return '';
+
+```
+if (!day && !month) return year;
+
+if (!day) return month + ' ' + year;
+
+return month + ' ' + day + ', ' + year;
+```
+
 }
+
+var authors = e.author || '';
+var title   = e.title || '';
+var book    = e.booktitle || '';
+var org     = e.organization || '';
+var address = e.address || '';
+var note    = e.note ? ' (' + e.note + ')' : '';
+
+var date = formatDate(e.day, e.month, e.year);
+
+return `     <div class="pub-item">       <div></div>       <div>
+        ${authors}. 
+        ${title}. 
+        In ${book}${address ? ', ' + address : ''}${date ? ', ' + date : ''}${note}. 
+        ${org}       </div>     </div>
+  `;
+}
+
 
 
 
