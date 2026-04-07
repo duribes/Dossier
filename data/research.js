@@ -34,7 +34,7 @@ var PUBLICATIONS_BIBTEX = `
   issn = {0013-7944},
   doi = {https://doi.org/10.1016/j.engfracmech.2020.106918},
   url = {http://www.sciencedirect.com/science/article/pii/S0013794419309324},
-  author = {D.A. Uribe-Suárez and P.-O. Bouchard and M. Delbo and D. Pino-Muñoz}
+  author = {D. Uribe-Suárez and P.-O. Bouchard and M. Delbo and D. Pino-Muñoz}
 }
 
 @article{UribeApplicationComets2020,
@@ -46,7 +46,7 @@ var PUBLICATIONS_BIBTEX = `
   issn = {0019-1035},
   doi = {https://doi.org/10.1016/j.icarus.2021.114347},
   url = {https://www.sciencedirect.com/science/article/pii/S0019103521000440},
-  author = {D.A. Uribe-Suárez and M. Delbo and P.-O. Bouchard and D. Pino-Muñoz}
+  author = {D. Uribe-Suárez and M. Delbo and P.-O. Bouchard and D. Pino-Muñoz}
 }
 
 @article{UTSA2017,
