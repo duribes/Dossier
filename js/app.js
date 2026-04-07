@@ -157,40 +157,40 @@ function makePhotoPlaceholder() {
 
 function renderResearch() {
 
-  var pubs   = parseBibTeX(PUBLICATIONS_BIBTEX);
-  var talks  = parseBibTeX(TALKS_BIBTEX);
-  var posters = parseBibTeX(POSTERS_BIBTEX);
+var pubs = parseBibTeX(PUBLICATIONS_BIBTEX);
+var talks = parseBibTeX(TALKS_BIBTEX);
+var posters = parseBibTeX(POSTERS_BIBTEX);
 
-  // Journal Publications
-  document.getElementById('journal-container').innerHTML =
-    pubs
-      .sort((a,b) => (b.year||0)-(a.year||0))
-      .map(renderPubItem)
-      .join('');
+// Journal
+document.getElementById('journal-container').innerHTML =
+pubs
+.sort((a,b) => (b.year||0)-(a.year||0))
+.map(renderPubItem)
+.join('');
 
-  // Conferences and Seminars
-  document.getElementById('conf-container').innerHTML =
-    talks
-      .filter(e => e.type === 'inproceedings' || e.presentation)
-      .sort((a,b) => (b.year||0)-(a.year||0))
-      .map(renderTalkItem)
-      .join('');
+// Conferences
+document.getElementById('conf-container').innerHTML =
+talks
+.sort((a,b) => (b.year||0)-(a.year||0))
+.map(renderTalkItem)
+.join('');
 
-  // Posters
-  document.getElementById('poster-container').innerHTML =
-    posters
-      .sort((a,b) => (b.year||0)-(a.year||0))
-      .map(renderTalkItem)
-      .join('');
+// Posters
+document.getElementById('poster-container').innerHTML =
+posters
+.sort((a,b) => (b.year||0)-(a.year||0))
+.map(renderTalkItem)
+.join('');
 
-  // Reviewer
-  document.getElementById('reviewer-container').innerHTML =
-    '<div class="pub-list">' +
-      REVIEWER_JOURNALS.map(j =>
-        '<div class="pub-item"><div></div><div>' + j + '</div></div>'
-      ).join('')
-    + '</div>';
+// Reviewer
+document.getElementById('reviewer-container').innerHTML =
+'<div class="pub-list">' +
+REVIEWER_JOURNALS.map(j =>
+'<div class="pub-item"><div></div><div>' + j + '</div></div>'
+).join('')
++ '</div>';
 }
+
 
 function renderPubItem(e) {
   var type   = e.type === 'book' ? 'Book' : e.type === 'article' ? 'Article' : e.type === 'inproceedings' ? 'Conference' : e.type;
