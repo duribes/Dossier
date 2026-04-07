@@ -140,6 +140,11 @@ var TALKS_BIBTEX = `
   address = {Sophia Antipolis, France}
 }
 
+const REVIEWER_JOURNALS = [
+  "Icarus",
+  "Metallurgical Research and Technology (MRT)"
+];
+
 const POSTERS_BIBTEX = `
 @inproceedings{poster1,
   author = {D. Uribe and D. Pino-Muñoz and M. Delbo and P.-O. Bouchard},
