@@ -140,11 +140,6 @@ var TALKS_BIBTEX = `
   address = {Sophia Antipolis, France}
 }
 
-const REVIEWER_JOURNALS = [
-  "Icarus",
-  "Metallurgical Research and Technology (MRT)"
-];
-
 const POSTERS_BIBTEX = `
 @inproceedings{poster1,
   author = {D. Uribe and D. Pino-Muñoz and M. Delbo and P.-O. Bouchard},
@@ -153,12 +148,9 @@ const POSTERS_BIBTEX = `
   address = {Sophia Antipolis, France},
   year = {2019}
 }
-
-@inproceedings{poster2,
-  author = {D.A. Uribe Suárez and P.-O. Bouchard and D. Pino-Muñoz and M. Delbo},
-  title = {Towards a crack propagation criterion and dynamic insertion of cohesive elements applied to thermal fatigue failure of comets/asteroids},
-  booktitle = {Colloque National Mécamat},
-  address = {Aussois, France},
-  year = {2019}
-}
 `;
+
+const REVIEWER_JOURNALS = [
+  "Icarus",
+  "Metallurgical Research and Technology (MRT)"
+];
