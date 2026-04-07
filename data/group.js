@@ -26,7 +26,7 @@ var GROUP_MEMBERS = [
     linkedin: "https://www.linkedin.com/in/duribes/",
     cvlac: "https://scienti.minciencias.gov.co/cvlac/visualizador/generarCurriculoCv.do?cod_rh=0001626017",
     orcid: "https://orcid.org/0000-0002-0364-8561",
-    
+    researchgate: "https://www.researchgate.net/profile/Diego-Uribe-Suarez",
     academia: "https://academia.uniandes.edu.co/AcademyCv/d.uribe"
   },
   {
