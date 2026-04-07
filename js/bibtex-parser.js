@@ -32,10 +32,15 @@ function parseBibTeX(bibtexStr) {
   return entries;
 }
 
+function normalizeStr(s) {
+  return s.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().trim();
+}
+
 function formatAuthors(authorsStr) {
   if (!authorsStr) return '';
-  // HIGHLIGHT_AUTHOR is set in data/profile.js
   var highlight = (typeof HIGHLIGHT_AUTHOR !== 'undefined') ? HIGHLIGHT_AUTHOR : '';
+  var highlightNorm = normalizeStr(highlight);
+
   return authorsStr
     .split(' and ')
     .map(function(a) {
@@ -43,8 +48,8 @@ function formatAuthors(authorsStr) {
       var name = parts.length === 2
         ? parts[1].trim() + ' ' + parts[0].trim()
         : a.trim();
-      // Bold if the name contains the highlight string
-      if (highlight && a.indexOf(highlight) !== -1) {
+      // Compare without accents, case-insensitive
+      if (highlight && normalizeStr(a).indexOf(highlightNorm) !== -1) {
         return '<strong>' + name + '</strong>';
       }
       return name;
