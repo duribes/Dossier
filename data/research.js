@@ -86,24 +86,6 @@ journal = {Boletín Científico CIOH}
 `;
 
 var TALKS_BIBTEX = `
-@inproceedings{PosterUTSA2017,
-title = {A Multi-Scale Model to Investigate Nonlinear Dispersive Electrical Impulse Propagation along Cytoskeleton Filaments},
-author = {Christian Hunley and D.A. Uribe Suárez and Marcelo Marucho},
-booktitle = {College of Sciences Research Conference},
-organization = {The University of Texas at San Antonio (UTSA)},
-year = {2017},
-address = {San Antonio, Texas, USA}
-}
-
-@inproceedings{ColloquePNP2018,
-title = {Crack Propagation Criteria and Dynamic Insertion of Cohesive Elements Applied to Thermal Fatigue Failure of Comets/Asteroids},
-author = {D.A. Uribe Suárez and Pierre-Olivier Bouchard and D. Pino-Muñoz and Marco Delbo},
-booktitle = {Colloque Quadriennal de Bilan et Prospective Programme national de Planétologie},
-organization = {Université Côte d'Azur and Observatoire de la Côte d'Azur},
-year = {2018},
-address = {Nice, France}
-}
-
 @inproceedings{SeminarioCIOH2014,
 title = {Evaluation of Sources of Atmospheric Information in the Caribbean},
 author = {D.A. Uribe Suárez and Escobar Sierra, C. A.},
@@ -140,6 +122,24 @@ booktitle = {Colloque National Mécamat-Rupture des Matériaux et des Structures
 organization = {L'association MECAMAT},
 year = {2019},
 address = {Aussois, France}
+}
+
+@inproceedings{ColloquePNP2018,
+title = {Crack Propagation Criteria and Dynamic Insertion of Cohesive Elements Applied to Thermal Fatigue Failure of Comets/Asteroids},
+author = {D.A. Uribe Suárez and Pierre-Olivier Bouchard and D. Pino-Muñoz and Marco Delbo},
+booktitle = {Colloque Quadriennal de Bilan et Prospective Programme national de Planétologie},
+organization = {Université Côte d'Azur and Observatoire de la Côte d'Azur},
+year = {2018},
+address = {Nice, France}
+}
+
+@inproceedings{PosterUTSA2017,
+title = {A Multi-Scale Model to Investigate Nonlinear Dispersive Electrical Impulse Propagation along Cytoskeleton Filaments},
+author = {Christian Hunley and D.A. Uribe Suárez and Marcelo Marucho},
+booktitle = {College of Sciences Research Conference},
+organization = {The University of Texas at San Antonio (UTSA)},
+year = {2017},
+address = {San Antonio, Texas, USA}
 }
 `;
 
