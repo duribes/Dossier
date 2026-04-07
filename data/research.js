@@ -139,4 +139,21 @@ var TALKS_BIBTEX = `
   year = {2019},
   address = {Sophia Antipolis, France}
 }
+
+const POSTERS_BIBTEX = `
+@inproceedings{poster1,
+  author = {D. Uribe and D. Pino-Muñoz and M. Delbo and P.-O. Bouchard},
+  title = {Mesh-independent crack propagation under mixed-mode loading using remeshing and dynamic insertion of cohesive elements},
+  booktitle = {Colloque des doctorants en 2éme année de l’EDSFA},
+  address = {Sophia Antipolis, France},
+  year = {2019}
+}
+
+@inproceedings{poster2,
+  author = {D.A. Uribe Suárez and P.-O. Bouchard and D. Pino-Muñoz and M. Delbo},
+  title = {Towards a crack propagation criterion and dynamic insertion of cohesive elements applied to thermal fatigue failure of comets/asteroids},
+  booktitle = {Colloque National Mécamat},
+  address = {Aussois, France},
+  year = {2019}
+}
 `;
