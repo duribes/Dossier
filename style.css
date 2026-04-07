@@ -333,6 +333,10 @@ h1, h2, h3, h4, h5, h6,
   margin-left: 0.5rem;
 }
 
+#reviewer-container .pub-item {
+  grid-template-columns: 0px 1fr;
+}
+
 /* Talks */
 .talk-item {
   padding: 1.25rem 0;
