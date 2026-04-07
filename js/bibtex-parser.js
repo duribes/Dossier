@@ -1,329 +1,69 @@
 // ============================================================
-// app.js — Lógica principal del dossier
+// bibtex-parser.js — Parser BibTeX ligero para el dossier
 // ============================================================
-
-/* ─── Navigation ─────────────────────────────────────────── */
-function initNav() {
-  var links   = document.querySelectorAll('.nav-links a');
-  var toggle  = document.querySelector('.nav-toggle');
-  var navList = document.querySelector('.nav-links');
-
-  links.forEach(function(link) {
-    link.addEventListener('click', function(e) {
-      e.preventDefault();
-      var target = link.dataset.section;
-      showSection(target);
-      links.forEach(function(l) { l.classList.remove('active'); });
-      link.classList.add('active');
-      navList.classList.remove('open');
-      if (toggle) toggle.classList.remove('open');
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-  });
-
-  if (toggle) {
-    toggle.addEventListener('click', function() {
-      navList.classList.toggle('open');
-      toggle.classList.toggle('open');
-    });
+function parseBibTeX(bibtexStr) {
+  var entries = [];
+  var entryRegex = /@(\w+)\s*\{([^,]+),([^@]*)\}/gs;
+  var match;
+  while ((match = entryRegex.exec(bibtexStr)) !== null) {
+    var type = match[1].toLowerCase();
+    var key  = match[2].trim();
+    var body = match[3];
+    var entry = { type: type, key: key };
+    var fieldRegex = /(\w+)\s*=\s*[\{"]([\s\S]*?)[\}"](?:\s*,|\s*$)/g;
+    var fm;
+    while ((fm = fieldRegex.exec(body)) !== null) {
+      var fname = fm[1].toLowerCase();
+      var fval  = fm[2].replace(/\s+/g, ' ').trim();
+      if (fval.startsWith('{') && fval.endsWith('}')) fval = fval.slice(1, -1);
+      entry[fname] = fval;
+    }
+    entries.push(entry);
   }
+  return entries;
 }
 
-function showSection(id) {
-  document.querySelectorAll('.page-section').forEach(function(s) {
-    s.classList.remove('active');
-  });
-  var sec = document.getElementById('section-' + id);
-  if (sec) sec.classList.add('active');
-  document.querySelectorAll('.nav-links a').forEach(function(a) {
-    a.classList.toggle('active', a.dataset.section === id);
-  });
+function normalizeStr(s) {
+  return s.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().trim();
 }
 
-/* ─── Home ───────────────────────────────────────────────── */
-function renderHome() {
-  var p = PROFILE;
+function formatAuthors(authorsStr) {
+  if (!authorsStr) return '';
 
-  var photoEl = document.getElementById('home-photo');
-  if (p.photo) {
-    var img = document.createElement('img');
-    img.src = p.photo;
-    img.alt = p.name;
-    img.className = 'home-photo';
-    img.onerror = function() { img.replaceWith(makePhotoPlaceholder()); };
-    photoEl.replaceWith(img);
-  } else {
-    photoEl.replaceWith(makePhotoPlaceholder());
+  // Todas las variantes del nombre del autor a resaltar
+  var highlights = [];
+  if (typeof HIGHLIGHT_AUTHOR !== 'undefined' && HIGHLIGHT_AUTHOR) {
+    highlights.push(normalizeStr(HIGHLIGHT_AUTHOR));
   }
+  // Variantes adicionales (apellido sin inicial del segundo nombre)
+  highlights.push(normalizeStr('D. Uribe-Suarez'));
+  highlights.push(normalizeStr('D. Uribe Suarez'));
+  highlights.push(normalizeStr('D.A. Uribe Suarez'));
 
-  document.getElementById('home-name').textContent        = p.name;
-  document.getElementById('home-title').textContent       = p.title;
-  document.getElementById('home-institution').textContent = p.institution + ' · ' + p.department;
-
-  var bioEl = document.getElementById('home-bio');
-  if (Array.isArray(p.bio)) {
-    bioEl.innerHTML = p.bio.map(function(par) {
-      return '<p style="margin-bottom:1rem">' + par + '</p>';
-    }).join('');
-  } else {
-    bioEl.textContent = p.bio;
-  }
-
-  var contactEl = document.getElementById('home-contact-list');
-  contactEl.innerHTML = '<li>' + emailIcon() + ' <a href="mailto:' + p.email + '">' + p.email + '</a></li>'
-    + (p.phone  ? '<li>' + phoneIcon()  + ' <span>' + p.phone  + '</span></li>' : '')
-    + (p.office ? '<li>' + officeIcon() + ' <span>' + p.office + '</span></li>' : '');
-
-  var socialEl = document.getElementById('home-social');
-  var socialLinks = [
-    { label: 'Scholar',      url: p.social.googleScholar },
-    { label: 'ORCID',        url: p.social.orcid },
-    { label: 'ResearchGate', url: p.social.researchgate },
-    { label: 'CvLAC',        url: p.social.cvlac },
-    { label: 'GitHub',       url: p.social.github },
-    { label: 'LinkedIn',     url: p.social.linkedin },
-    { label: 'Academia',     url: p.social.academia },
-  ];
-  socialEl.innerHTML = socialLinks
-    .filter(function(l) { return l.url; })
-    .map(function(l) {
-      return '<a href="' + l.url + '" class="social-btn" target="_blank" rel="noopener">' + l.label + '</a>';
+  return authorsStr
+    .split(' and ')
+    .map(function(a) {
+      var parts = a.split(',');
+      var name = parts.length === 2
+        ? parts[1].trim() + ' ' + parts[0].trim()
+        : a.trim();
+      var aNorm = normalizeStr(a);
+      var isHighlight = highlights.some(function(h) {
+        return aNorm.indexOf(h) !== -1;
+      });
+      return isHighlight ? '<strong>' + name + '</strong>' : name;
     })
-    .join('');
+    .join(', ');
 }
 
-function makePhotoPlaceholder() {
-  var d = document.createElement('div');
-  d.className = 'home-photo-placeholder';
-  d.textContent = 'Photo';
-  return d;
+function groupByTopic(entries, topics) {
+  var grouped = {};
+  topics.forEach(function(t) { grouped[t.id] = []; });
+  grouped['__other__'] = [];
+  entries.forEach(function(e) {
+    var t = e.topic || '__other__';
+    if (grouped[t]) grouped[t].push(e);
+    else grouped['__other__'].push(e);
+  });
+  return grouped;
 }
-
-/* ─── Research ───────────────────────────────────────────── */
-function renderResearch() {
-  var pubEntries  = parseBibTeX(PUBLICATIONS_BIBTEX);
-  var talkEntries = parseBibTeX(TALKS_BIBTEX);
-
-  var pubContainer = document.getElementById('publications-container');
-  pubContainer.innerHTML = '';
-
-  // Si hay temas definidos, agrupar; si no, mostrar todo en lista plana
-  if (RESEARCH_TOPICS && RESEARCH_TOPICS.length > 0) {
-    var grouped = groupByTopic(pubEntries, RESEARCH_TOPICS);
-    RESEARCH_TOPICS.forEach(function(topic) {
-      var items = grouped[topic.id] || [];
-      if (!items.length) return;
-      var block = document.createElement('div');
-      block.className = 'topic-block';
-      block.innerHTML = '<div class="topic-header">'
-        + '<h3>' + topic.title + '</h3>'
-        + (topic.description ? '<p>' + topic.description + '</p>' : '')
-        + '</div>'
-        + '<div class="pub-list">'
-        + items.sort(function(a,b) { return (b.year||0) - (a.year||0); }).map(renderPubItem).join('')
-        + '</div>';
-      pubContainer.appendChild(block);
-    });
-  } else {
-    // Sin temas: mostrar todas las publicaciones ordenadas por año
-    var sorted = pubEntries.sort(function(a,b) { return (b.year||0) - (a.year||0); });
-    var block = document.createElement('div');
-    block.className = 'pub-list';
-    block.innerHTML = sorted.map(renderPubItem).join('');
-    pubContainer.appendChild(block);
-  }
-
-  var talksContainer = document.getElementById('talks-container');
-  talksContainer.innerHTML = talkEntries
-    .sort(function(a,b) { return (b.year||0) - (a.year||0); })
-    .map(renderTalkItem).join('');
-}
-
-function renderPubItem(e) {
-  var type   = e.type === 'book' ? 'Book' : e.type === 'article' ? 'Article' : e.type === 'inproceedings' ? 'Conference' : e.type;
-  var venue  = e.journal || e.booktitle || e.publisher || '';
-  var doiUrl = e.doi ? 'https://doi.org/' + e.doi : (e.url || '');
-  var vol    = e.volume ? ', ' + e.volume : '';
-  var pages  = e.pages  ? ', pp. ' + e.pages : '';
-
-  return '<div class="pub-item">'
-    + '<span class="pub-year">' + (e.year || '—') + '</span>'
-    + '<div>'
-    + '<div class="pub-authors">' + formatAuthors(e.author) + '</div>'
-    + '<div class="pub-title">' + (e.title || '') + ' <span class="pub-type-badge">' + type + '</span></div>'
-    + '<div class="pub-venue">' + venue + vol + pages + '</div>'
-    + '<div class="pub-links">'
-    + (doiUrl ? '<a href="' + doiUrl + '" class="pub-link" target="_blank" rel="noopener">DOI</a>' : '')
-    + (e.url && !e.doi ? '<a href="' + e.url + '" class="pub-link" target="_blank" rel="noopener">Link</a>' : '')
-    + '</div>'
-    + '</div>'
-    + '</div>';
-}
-
-function renderTalkItem(e) {
-  var venue = e.booktitle || e.howpublished || '';
-  var org   = e.organization ? ' · ' + e.organization : '';
-  return '<div class="talk-item">'
-    + '<span class="pub-year">' + (e.year || '—') + '</span>'
-    + '<div>'
-    + '<div class="talk-title">' + (e.title || '') + '</div>'
-    + '<div class="talk-venue">' + venue + org + '</div>'
-    + '<div class="talk-location">' + (e.address || '') + (e.month ? ' · ' + e.month : '') + '</div>'
-    + (e.url ? '<div class="pub-links"><a href="' + e.url + '" class="pub-link" target="_blank" rel="noopener">Link</a></div>' : '')
-    + '</div>'
-    + '</div>';
-}
-
-/* ─── Research Group ─────────────────────────────────────── */
-function renderGroup() {
-  document.getElementById('group-name').textContent           = GROUP_INFO.name;
-  document.getElementById('group-description').textContent    = GROUP_INFO.description;
-  document.getElementById('group-classification').textContent = GROUP_INFO.classification;
-  document.getElementById('group-founded').textContent        = GROUP_INFO.founded;
-
-  var grid = document.getElementById('members-grid');
-  grid.innerHTML = GROUP_MEMBERS.map(renderMemberCard).join('');
-}
-
-function renderMemberCard(m) {
-  var initials = m.name.split(' ').slice(0,2).map(function(w) { return w[0]; }).join('');
-  var photoHtml = m.photo
-    ? '<img src="' + m.photo + '" alt="' + m.name + '" class="member-photo" onerror="this.style.display=\'none\'">'
-    : '<div class="member-photo-placeholder">' + initials + '</div>';
-
-  var links = [
-    { label: 'Scholar',      url: m.googleScholar  || '' },
-    { label: 'ORCID',        url: m.orcid          || '' },
-    { label: 'ResearchGate', url: m.researchgate   || '' },
-    { label: 'CvLAC',        url: m.cvlac          || '' },
-    { label: 'LinkedIn',     url: m.linkedin       || '' },
-    { label: 'Academia',     url: m.academia       || '' },
-  ].filter(function(l) { return l.url; });
-
-  return '<div class="member-card">'
-    + '<div class="member-header">'
-    + photoHtml
-    + '<div>'
-    + '<div class="member-name">' + m.name + '</div>'
-    + '<div class="member-position">' + m.position + '</div>'
-    + '<div class="member-formation">' + m.formation + '</div>'
-    + '</div>'
-    + '</div>'
-    + (m.description ? '<div class="member-desc">' + m.description + '</div>' : '')
-    + '<div class="member-email"><a href="mailto:' + m.email + '">' + m.email + '</a></div>'
-    + (links.length
-        ? '<div class="member-links">'
-          + links.map(function(l) {
-              return '<a href="' + l.url + '" class="member-link" target="_blank" rel="noopener">' + l.label + '</a>';
-            }).join('')
-          + '</div>'
-        : '')
-    + '</div>';
-}
-
-/* ─── Teaching ───────────────────────────────────────────── */
-function renderTeaching() {
-  var ugGrid = document.getElementById('ug-grid');
-  var pgGrid = document.getElementById('pg-grid');
-  if (ugGrid) ugGrid.innerHTML = UNDERGRADUATE_COURSES.map(renderCourseCard).join('');
-  if (pgGrid) pgGrid.innerHTML = POSTGRADUATE_COURSES.map(renderCourseCard).join('');
-}
-
-function renderCourseCard(c) {
-  return '<div class="course-card">'
-    + '<div class="course-header">'
-    + '<span class="course-code">' + (c.code || '') + '</span>'
-    + '<span class="course-credits">' + (c.credits ? c.credits + ' cr.' : '') + '</span>'
-    + '</div>'
-    + '<div class="course-name">' + c.name + '</div>'
-    + '<div class="course-desc">' + c.description + '</div>'
-    + '</div>';
-}
-
-/* ─── Interests ──────────────────────────────────────────── */
-function renderInterests() {
-  var introEl = document.getElementById('interests-intro');
-  if (introEl) introEl.textContent = INTERESTS_INTRO;
-
-  var researchContainer = document.getElementById('research-interests');
-  if (researchContainer) {
-    researchContainer.innerHTML = '';
-    RESEARCH_INTERESTS.forEach(function(sec) {
-      researchContainer.innerHTML += '<div class="interest-section">'
-        + '<h3>' + sec.category + '</h3>'
-        + '<div class="interests-cards">'
-        + sec.items.map(function(i) {
-            return '<div class="interest-card">'
-              + '<div class="interest-card-title">' + i.title + '</div>'
-              + '<div class="interest-card-desc">' + i.description + '</div>'
-              + '</div>';
-          }).join('')
-        + '</div></div>';
-    });
-  }
-
-  var otherContainer = document.getElementById('other-interests');
-  if (otherContainer) {
-    otherContainer.innerHTML = '';
-    OTHER_INTERESTS.forEach(function(sec) {
-      otherContainer.innerHTML += '<div class="interest-section">'
-        + '<h3>' + sec.category + '</h3>'
-        + '<div class="other-interests-list">'
-        + sec.items.map(function(i) {
-            return '<span class="other-interest-tag">' + i + '</span>';
-          }).join('')
-        + '</div></div>';
-    });
-  }
-}
-
-/* ─── Footer ─────────────────────────────────────────────── */
-function renderFooter() {
-  var p = PROFILE;
-  document.getElementById('footer-name').textContent = p.name;
-  document.getElementById('footer-role').textContent = p.title + ' · ' + p.institution;
-
-  var col1 = document.getElementById('footer-links-1');
-  var col2 = document.getElementById('footer-links-2');
-
-  var links1 = [
-    { label: 'GitHub',  url: p.social.github },
-    { label: 'ORCID',   url: p.social.orcid  },
-    { label: 'Scholar', url: p.social.googleScholar },
-  ].filter(function(l) { return l.url; });
-
-  var links2 = [
-    { label: 'LinkedIn',     url: p.social.linkedin },
-    { label: 'ResearchGate', url: p.social.researchgate },
-    { label: 'CvLAC',        url: p.social.cvlac },
-  ].filter(function(l) { return l.url; });
-
-  col1.innerHTML = links1.map(function(l) {
-    return '<li><a href="' + l.url + '" target="_blank" rel="noopener">' + l.label + '</a></li>';
-  }).join('');
-  col2.innerHTML = links2.map(function(l) {
-    return '<li><a href="' + l.url + '" target="_blank" rel="noopener">' + l.label + '</a></li>';
-  }).join('');
-
-  document.getElementById('footer-year').textContent = new Date().getFullYear();
-}
-
-/* ─── SVG Icons ──────────────────────────────────────────── */
-function emailIcon()  { return '<svg class="contact-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="4" width="16" height="12" rx="2"/><path d="M2 7l8 5 8-5"/></svg>'; }
-function phoneIcon()  { return '<svg class="contact-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 4a1 1 0 011-1h2.5l1 3.5-1.5 1a11 11 0 005.5 5.5l1-1.5L16 12.5V15a1 1 0 01-1 1A13 13 0 013 4z"/></svg>'; }
-function officeIcon() { return '<svg class="contact-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 18V7l6-4 6 4v11M9 18v-5h2v5"/></svg>'; }
-
-/* ─── Init ───────────────────────────────────────────────── */
-document.addEventListener('DOMContentLoaded', function() {
-  function run(fn, label) {
-    try { fn(); } catch(e) { console.error('[dossier] ' + label + ':', e); }
-  }
-  run(initNav,         'initNav');
-  run(renderHome,      'renderHome');
-  run(renderResearch,  'renderResearch');
-  run(renderGroup,     'renderGroup');
-  run(renderTeaching,  'renderTeaching');
-  run(renderInterests, 'renderInterests');
-  run(renderFooter,    'renderFooter');
-  run(function() { showSection('home'); }, 'showSection');
-});
