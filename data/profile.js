@@ -1,27 +1,30 @@
 // ============================================================
-// DATOS PERSONALES — Edita este archivo para actualizar tu info
+// Author name to bold in publication lists
+// Must match exactly as written in the BibTeX author field
 // ============================================================
+var HIGHLIGHT_AUTHOR = "D.A. Uribe-Suárez";
 
-const PROFILE = {
-  name: "Diego Uribe-Suárez, PhD",
-  title: "Postdoctoral Researcher ",
-  institution: "Universidad de los Andes",
-  department: "Department of Mechanical Engineering",
-  email: "d.uribe@uniandes.edu.co",
-  phone: "(571) 339 4949 Ext: 1858",
-  office: "Office ML - 622",
-  photo: "assets/diego_uribe.jpg", // Reemplaza con tu foto
-  bio: `Diego Uribe-Suárez is a postdoctoral researcher in the Department of Mechanical Engineering at Universidad de los Andes, where he also teaches undergraduate and graduate courses. He earned his B.Sc. in Mechanical Engineering and his M.Sc. in Engineering from Universidad EAFIT in Medellín, Colombia. He received his Ph.D. in Computational Mechanics and Materials from Université Côte d’Azur, France, through a collaboration between the Centre for Material Forming (CEMEF MINES ParisTech) and the Observatoire de la Côte d’Azur (OCA–Université Côte d’Azur).
 
-His research focuses on the development and implementation of advanced numerical methods for the simulation of complex engineering problems, with applications in the mechanical behavior of materials, fracture and damage mechanics, and structural analysis. Currently, he works on the Material Point Method (MPM) and the Virtual Element Method (VEM), exploring their potential for modeling challenging problems in mechanics and materials science. His background combines strong expertise in finite element analysis, numerical simulation, and applied mathematics with hands-on experience in scientific software development. He is passionate about advancing computational mechanics and aims to contribute to both the theoretical foundations and practical applications of modern simulation tools while fostering collaboration between academia and industry.
-`,
+var PROFILE = {
+  name: "Dr. Nombre Apellido",
+  title: "Profesor Asociado / Associate Professor",
+  institution: "Universidad Nacional de Colombia",
+  department: "Departamento de Ingeniería",
+  email: "nombre.apellido@unal.edu.co",
+  phone: "+57 (4) 000-0000",
+  office: "Oficina 101, Edificio M8",
+  photo: "assets/photo.jpg", // Reemplaza con tu foto
+  bio: `Investigador en el área de [tu área principal]. Doctor en [disciplina] de [universidad]. 
+  Mi trabajo se centra en [descripción breve de tu investigación]. He publicado más de [N] artículos 
+  en revistas indexadas y he dirigido proyectos financiados por [entidades]. 
+  Actualmente soy [cargo] en [institución].`,
   social: {
-    github: "https://github.com/duribes",
-    googleScholar: "https://scholar.google.com/citations?user=https://scholar.google.com/citations?user=EzmANP0AAAAJ&hl=en",
-    orcid: "https://orcid.org/0000-0002-0364-8561",
-    researchgate: "https://www.researchgate.net/profile/Diego-Uribe-Suarez",
-    linkedin: "https://www.linkedin.com/in/duribes/",
-    cvlac: "https://scienti.minciencias.gov.co/cvlac/visualizador/generarCurriculoCv.do?cod_rh=0001626017",
-    academia: "https://academia.uniandes.edu.co/AcademyCv/d.uribe",
+    github: "https://github.com/tuusuario",
+    googleScholar: "https://scholar.google.com/citations?user=TUCODIGO",
+    orcid: "https://orcid.org/0000-0000-0000-0000",
+    researchgate: "https://www.researchgate.net/profile/Tu-Nombre",
+    linkedin: "https://www.linkedin.com/in/tuusuario",
+    cvlac: "https://scienti.minciencias.gov.co/cvlac/visualizador/generarCurriculoCv.do?cod_rh=TUCODIGO",
+    academia: "https://independent.academia.edu/TuNombre",
   }
 };
