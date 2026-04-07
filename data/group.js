@@ -72,7 +72,7 @@ var GROUP_MEMBERS = [
     formation: "BSc. Mechanical Engineering (Minor in Computational Mathematics), Universidad de los Andes, Bogotá, Colombia, 2027",    
     description: "His ...................",
     email: "t.palacios1@uniandes.edu.co",
-    photo: "assets/members/Undergrad_Tomas.JPG",
+    photo: "assets/members/Undergrad_Tomas.JPG.jpeg",
     linkedin: "https://www.linkedin.com/in/tom%C3%A1s-palacios-mu%C3%B1oz-31006736b/",
     researchgate: ""
   },
