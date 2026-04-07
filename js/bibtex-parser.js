@@ -34,12 +34,20 @@ function parseBibTeX(bibtexStr) {
 
 function formatAuthors(authorsStr) {
   if (!authorsStr) return '';
+  // HIGHLIGHT_AUTHOR is set in data/profile.js
+  var highlight = (typeof HIGHLIGHT_AUTHOR !== 'undefined') ? HIGHLIGHT_AUTHOR : '';
   return authorsStr
     .split(' and ')
-    .map(a => {
-      const parts = a.split(',');
-      if (parts.length === 2) return `${parts[1].trim()} ${parts[0].trim()}`;
-      return a.trim();
+    .map(function(a) {
+      var parts = a.split(',');
+      var name = parts.length === 2
+        ? parts[1].trim() + ' ' + parts[0].trim()
+        : a.trim();
+      // Bold if the name contains the highlight string
+      if (highlight && a.indexOf(highlight) !== -1) {
+        return '<strong>' + name + '</strong>';
+      }
+      return name;
     })
     .join(', ');
 }
