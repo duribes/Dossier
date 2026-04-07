@@ -104,7 +104,7 @@ function makePhotoPlaceholder() {
 }
 
 /* ─── Research ───────────────────────────────────────────── */
-/*function renderResearch() {
+function renderResearch() {
   var pubEntries  = parseBibTeX(PUBLICATIONS_BIBTEX);
   var talkEntries = parseBibTeX(TALKS_BIBTEX);
   var grouped     = groupByTopic(pubEntries, RESEARCH_TOPICS);
@@ -153,49 +153,6 @@ function makePhotoPlaceholder() {
   talksContainer.innerHTML = talkEntries
     .sort(function(a,b) { return (b.year||0) - (a.year||0); })
     .map(renderTalkItem).join('');
-}*/
-function renderResearch() {
-
-var pubs = parseBibTeX(PUBLICATIONS_BIBTEX) || [];
-var talks = parseBibTeX(TALKS_BIBTEX) || [];
-var posters = typeof POSTERS_BIBTEX !== 'undefined'
-? parseBibTeX(POSTERS_BIBTEX)
-: [];
-
-// Journal Publications
-var journal = document.getElementById('journal-container');
-if (journal) {
-journal.innerHTML = pubs
-.sort((a,b) => (b.year||0)-(a.year||0))
-.map(renderPubItem)
-.join('');
-}
-
-// Conferences
-var conf = document.getElementById('conf-container');
-if (conf) {
-conf.innerHTML = talks
-.sort((a,b) => (b.year||0)-(a.year||0))
-.map(renderTalkItem)
-.join('');
-}
-
-// Posters
-var post = document.getElementById('poster-container');
-if (post) {
-post.innerHTML = posters
-.sort((a,b) => (b.year||0)-(a.year||0))
-.map(renderTalkItem)
-.join('');
-}
-
-// Reviewer
-var rev = document.getElementById('reviewer-container');
-if (rev && typeof REVIEWER_JOURNALS !== 'undefined') {
-rev.innerHTML = REVIEWER_JOURNALS
-.map(j => '<div class="pub-item"><div></div><div>' + j + '</div></div>')
-.join('');
-}
 }
 
 
@@ -222,7 +179,7 @@ function renderPubItem(e) {
     + '</div>';
 }
 
-/*function renderTalkItem(e) {
+function renderTalkItem(e) {
   return '<div class="talk-item">'
     + '<span class="pub-year">' + (e.year || '—') + '</span>'
     + '<div>'
@@ -232,15 +189,6 @@ function renderPubItem(e) {
     + (e.url ? '<div class="pub-links"><a href="' + e.url + '" class="pub-link" target="_blank" rel="noopener">Link</a></div>' : '')
     + '</div>'
     + '</div>';
-}*/
-function renderTalkItem(e) {
-
-return `     <div class="pub-item">       <div></div>       <div>
-        ${e.author || ''}. 
-        ${e.title || ''}. 
-        In ${e.booktitle || ''}${e.address ? ', ' + e.address : ''}${e.year ? ', ' + e.year : ''}. 
-        ${e.organization || ''}       </div>     </div>
-  `;
 }
 
 
