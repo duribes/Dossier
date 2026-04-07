@@ -91,18 +91,26 @@ title = {Evaluation of Sources of Atmospheric Information in the Caribbean},
 author = {D.A. Uribe Suárez and Escobar Sierra, C. A.},
 booktitle = {Nuevos conocimientos y herramientas para el estudio de la erosión costera entre Galerazamba y Cartagena},
 organization = {Centro de Investigaciones Oceanográficas e Hidrográficas del Caribe (CIOH)},
+address = {Cartagena de Indias, Bolivar, Colombia},
+month = {October},
+day = {21},
 year = {2014},
-address = {Cartagena de Indias, Bolivar, Colombia}
+note = {Presentation}
 }
+
 
 @inproceedings{CFRAC2019,
 title = {Mesh-independent Crack Propagation under Mixed-Mode Loading using Remeshing and Dynamic Insertion of Cohesive Elements},
 author = {D. Uribe and D. Pino-Muñoz and M. Delbo and P.-O. Bouchard},
 booktitle = {VI International Conference on Computational Modeling of Fracture and Failure of Materials and Structures (CFRAC 2019)},
 organization = {ECCOMAS Thematic Conference},
+address = {Braunschweig, Germany},
+month = {June},
+day = {12-14},
 year = {2019},
-address = {Braunschweig, Germany}
+note = {Presentation}
 }
+
 `;
 
 var POSTERS_BIBTEX = `
@@ -111,8 +119,11 @@ title = {Mesh-independent Crack Propagation under Mixed-Mode Loading using Remes
 author = {D. Uribe and D. Pino-Muñoz and Marco Delbo and Pierre-Olivier Bouchard},
 booktitle = {Colloque des doctorants en 2ème année de l'EDSFA},
 organization = {École doctorale Sciences Fondamentales et Appliquées},
+address = {Sophia Antipolis, France},
+month = {May},
+day = {20},
 year = {2019},
-address = {Sophia Antipolis, France}
+note = {Poster}
 }
 
 @inproceedings{MECAMAT2019,
@@ -120,8 +131,11 @@ title = {Towards a crack propagation criterion and dynamic insertion of cohesive
 author = {D.A. Uribe Suárez and Pierre-Olivier Bouchard and D. Pino-Muñoz and Marco Delbo},
 booktitle = {Colloque National Mécamat-Rupture des Matériaux et des Structures},
 organization = {L'association MECAMAT},
+address = {Aussois, France},
+month = {January},
+day = {21-25},
 year = {2019},
-address = {Aussois, France}
+note = {Poster}
 }
 
 @inproceedings{ColloquePNP2018,
