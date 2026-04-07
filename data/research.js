@@ -35,7 +35,6 @@ const PUBLICATIONS_BIBTEX = `
   topic     = {topic1}
 }
 
-
 @article{LuisAmigo_2023,
 	title = {Analysis of the added value for the quantitative reasoning competency at the Luis Amigó Catholic University in 2021},
 	journal = {Revista de Investigación, Desarrollo e Innovación},
