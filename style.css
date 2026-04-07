@@ -333,25 +333,27 @@ h1, h2, h3, h4, h5, h6,
   margin-left: 0.5rem;
 }
 
-#reviewer-container .pub-item {
-  grid-template-columns: 0px 1fr;
+#conf-container,
+#poster-container {
+  counter-reset: item;
 }
 
-#poster-container .pub-item,
-#conf-container .pub-item {
-  grid-template-columns: 1.5rem 1fr;
+#conf-container .pub-item,
+#poster-container .pub-item {
+  grid-template-columns: 1.8rem 1fr;
 }
 
-#poster-container .pub-item::before,
-#conf-container .pub-item::before {
+#conf-container .pub-item::before,
+#poster-container .pub-item::before {
   counter-increment: item;
   content: counter(item) ".";
   color: var(--ink-light);
+  padding-right: 0.5rem;
 }
 
-#poster-container,
-#conf-container {
-  counter-reset: item;
+#conf-container .pub-item > div:first-child,
+#poster-container .pub-item > div:first-child {
+  display: none;
 }
 
 /* Talks */
