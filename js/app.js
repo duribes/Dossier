@@ -105,55 +105,40 @@ function makePhotoPlaceholder() {
 
 /* ─── Research ───────────────────────────────────────────── */
 function renderResearch() {
-  var pubEntries  = parseBibTeX(PUBLICATIONS_BIBTEX);
-  var talkEntries = parseBibTeX(TALKS_BIBTEX);
-  var grouped     = groupByTopic(pubEntries, RESEARCH_TOPICS);
 
-  var pubContainer = document.getElementById('publications-container');
-  pubContainer.innerHTML = '';
-
-  if (RESEARCH_TOPICS.length === 0) {
-    // No topics defined — show all publications in a flat list
-    var allItems = pubEntries.sort(function(a,b) { return (b.year||0) - (a.year||0); });
-    var block = document.createElement('div');
-    block.className = 'pub-list';
-    block.innerHTML = allItems.map(renderPubItem).join('');
-    pubContainer.appendChild(block);
-  } else {
-    // Show publications grouped by topic
-    RESEARCH_TOPICS.forEach(function(topic) {
-      var items = grouped[topic.id] || [];
-      if (!items.length) return;
-
-      var block = document.createElement('div');
-      block.className = 'topic-block';
-      block.innerHTML = '<div class="topic-header">'
-        + '<h3>' + topic.title + '</h3>'
-        + (topic.description ? '<p>' + topic.description + '</p>' : '')
-        + '</div>'
-        + '<div class="pub-list">'
-        + items.sort(function(a,b) { return (b.year||0) - (a.year||0); }).map(renderPubItem).join('')
-        + '</div>';
-      pubContainer.appendChild(block);
-    });
-
-    // Also show uncategorized publications if any
-    var other = grouped['__other__'] || [];
-    if (other.length) {
-      var otherBlock = document.createElement('div');
-      otherBlock.className = 'topic-block';
-      otherBlock.innerHTML = '<div class="pub-list">'
-        + other.sort(function(a,b) { return (b.year||0) - (a.year||0); }).map(renderPubItem).join('')
-        + '</div>';
-      pubContainer.appendChild(otherBlock);
-    }
-  }
-
-  var talksContainer = document.getElementById('talks-container');
-  talksContainer.innerHTML = talkEntries
-    .sort(function(a,b) { return (b.year||0) - (a.year||0); })
-    .map(renderTalkItem).join('');
+  var pubs    = parseBibTeX(PUBLICATIONS_BIBTEX);
+  var talks   = parseBibTeX(TALKS_BIBTEX);
+  var posters = parseBibTeX(POSTERS_BIBTEX);
+  
+  // Journal publications
+  document.getElementById("journal-container").innerHTML =
+  pubs
+  .sort((a,b) => (b.year||0) - (a.year||0))
+  .map(renderPubItem)
+  .join("");
+  
+  // Conferences
+  document.getElementById("conf-container").innerHTML =
+  talks
+  .sort((a,b) => (b.year||0) - (a.year||0))
+  .map(renderTalkItem)
+  .join("");
+  
+  // Posters
+  document.getElementById("poster-container").innerHTML =
+  posters
+  .sort((a,b) => (b.year||0) - (a.year||0))
+  .map(renderTalkItem)
+  .join("");
+  
+  // Reviewer
+  document.getElementById("reviewer-container").innerHTML =
+  REVIEWER_JOURNALS.map(j =>
+  '<div class="pub-item"><div></div><div>' + j + '</div></div>'
+  ).join("");
 }
+
+
 
 
 
