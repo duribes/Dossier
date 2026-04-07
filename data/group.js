@@ -69,8 +69,6 @@ var GROUP_MEMBERS = [
     orcid: "",
     researchgate: ""
   },
-
-
   {
     id: 5,
     name: "Alejandro Guerrero Caicedo",
@@ -96,15 +94,7 @@ var GROUP_MEMBERS = [
     linkedin: "https://www.linkedin.com/in/s-gonzalez-buenaventura/",
     orcid: "",
     researchgate: ""
-  },
-
-
-
-
-
-
-
-  
+  },  
   {
     id: 7,
     name: "Carlos León",
@@ -126,19 +116,5 @@ var GROUP_MEMBERS = [
     photo: "assets/members/Undergrad_Tomas.JPG.jpeg",
     linkedin: "https://www.linkedin.com/in/tom%C3%A1s-palacios-mu%C3%B1oz-31006736b/",
     researchgate: ""
-  },
-  {
-    id: 9,
-    name: "Nombre Apellido",
-    position: "External Collaborator",
-    formation: "PhD en Matemáticas, Universidad de Barcelona (2012)",
-    description: "Short description about this member research focus, current projects, or academic background. Edit this field in group.js.",
-    email: "colaborador@exterior.edu",
-    photo: "assets/members/member5.jpg",
-    googleScholar: "https://scholar.google.com/citations?user=CODIGO5",
-    linkedin: "https://www.linkedin.com/in/usuario5",
-    orcid: "https://orcid.org/0000-0000-0000-0005",
-    academia: "https://barcelona.academia.edu/Nombre",
-    researchgate: "https://www.researchgate.net/profile/Nombre5"
   }
 ];
