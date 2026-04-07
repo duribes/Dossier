@@ -89,11 +89,12 @@ var GROUP_MEMBERS = [
     formation: "BSc. Mechanical Engineering, Universidad de los Andes, Bogotá, Colombia, 2024<br>MSc. Mechanical Engineering, Universidad de los Andes, Bogotá, Colombia, 2026",
     description: "He is working on a small research project with the group, separate from his MSc thesis work. .......",
     email: "s.gonzalez32@uniandes.edu.co",
-    photo: "assets/members/Master_Student_Olarte.jpeg",
-    googleScholar: "",
+    photo: "assets/members/Master_Buenaventura.jpeg",
+    googleScholar: "https://scholar.google.com/citations?user=8dmISLYAAAAJ&hl=en",
     linkedin: "https://www.linkedin.com/in/s-gonzalez-buenaventura/",
-    orcid: "",
-    researchgate: ""
+    orcid: "https://orcid.org/0009-0005-8925-7762",
+    cvlac: "https://scienti.minciencias.gov.co/cvlac/visualizador/generarCurriculoCv.do?cod_rh=0002327978",    
+    researchgate: "https://www.researchgate.net/profile/Santiago-Gonzalez-80?ev=hdr_xprf"
   },  
   {
     id: 7,
