@@ -226,28 +226,33 @@ function renderPubItem(e) {
 }*/
 function renderTalkItem(e) {
 
-  var authors = e.author || '';
-  var title = e.title || '';
-  var book = e.booktitle || '';
-  var org = e.organization || '';
-  var address = e.address || '';
-  var year = e.year || '';
-  var month = e.month || '';
-  var day = e.day || '';
-  var note = e.note ? ' (' + e.note + ')' : '';
-  
-  var date = '';
-  if (month || day || year) {
-  date = [month, day, year].filter(Boolean).join(' ');
-  }
-  
-  return `     <div class="pub-item">       <div></div>       <div>
-          ${authors}. 
-          ${title}. 
-          In ${book}${address ? ', ' + address : ''}${date ? ', ' + date : ''}${note}. 
-          ${org}       </div>     </div>
-    `;
+var authors = e.author || '';
+var title = e.title || '';
+var book = e.booktitle || '';
+var org = e.organization || '';
+var address = e.address || '';
+var year = e.year || '';
+var month = e.month || '';
+var day = e.day || '';
+var note = e.note || '';
+
+var date = '';
+if (month && day && year) {
+date = month + ' ' + day + ', ' + year;
+} else if (year) {
+date = year;
 }
+
+var noteText = note ? ' (' + note + ')' : '';
+
+return `     <div class="pub-item">       <div></div>       <div>
+        ${authors}. 
+        ${title}. 
+        In ${book}${address ? ', ' + address : ''}${date ? ', ' + date : ''}${noteText}. 
+        ${org}       </div>     </div>
+  `;
+}
+
 
 
 
