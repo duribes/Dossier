@@ -337,6 +337,23 @@ h1, h2, h3, h4, h5, h6,
   grid-template-columns: 0px 1fr;
 }
 
+#poster-container .pub-item,
+#conf-container .pub-item {
+  grid-template-columns: 1.5rem 1fr;
+}
+
+#poster-container .pub-item::before,
+#conf-container .pub-item::before {
+  counter-increment: item;
+  content: counter(item) ".";
+  color: var(--ink-light);
+}
+
+#poster-container,
+#conf-container {
+  counter-reset: item;
+}
+
 /* Talks */
 .talk-item {
   padding: 1.25rem 0;
