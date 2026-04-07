@@ -232,14 +232,23 @@ function renderTalkItem(e) {
   var org = e.organization || '';
   var address = e.address || '';
   var year = e.year || '';
+  var month = e.month || '';
+  var day = e.day || '';
+  var note = e.note ? ' (' + e.note + ')' : '';
+  
+  var date = '';
+  if (month || day || year) {
+  date = [month, day, year].filter(Boolean).join(' ');
+  }
   
   return `     <div class="pub-item">       <div></div>       <div>
           ${authors}. 
           ${title}. 
-          In ${book}${address ? ', ' + address : ''}${year ? ', ' + year : ''}. 
+          In ${book}${address ? ', ' + address : ''}${date ? ', ' + date : ''}${note}. 
           ${org}       </div>     </div>
     `;
 }
+
 
 
 /* ─── Research Group ─────────────────────────────────────── */
