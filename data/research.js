@@ -28,11 +28,16 @@ const PUBLICATIONS_BIBTEX = `
   title     = {Estimating the added value of critical reading competence in college students using statistical modeling},
   journal   = {Revista de Investigación, Desarrollo e Innovación},
   year      = {2025},
+  ISSN = {2027-8306},
   volume    = {15},
   pages     = {67--86},
   doi = {10.19053/uptc.20278306.v15.n1.2025.18823},
   topic     = {topic1}
 }
+
+
+
+
 
 @article{apellido2023complex,
   author    = {Apellido, Nombre and Otro, Autor},
