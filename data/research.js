@@ -36,6 +36,19 @@ const PUBLICATIONS_BIBTEX = `
 }
 
 
+@article{LuisAmigo_2023,
+	title = {Analysis of the added value for the quantitative reasoning competency at the Luis Amigó Catholic University in 2021},
+	journal = {Revista de Investigación, Desarrollo e Innovación},
+	volume = {13},
+	issue  ={2},
+	pages = {329-344},
+	year = {2023},
+	issn = {2027-8306},
+	doi = {10.19053/20278306.v13.n2.2023.16838},
+	author = {G.J. Posada-Hernández and M. López-Bonilla and D.A. Uribe-Suárez and V. Gómez-Ceballos and L.F. Cardona-Palacio}
+}
+
+
 
 
 
