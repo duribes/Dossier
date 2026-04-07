@@ -29,13 +29,10 @@ function normalizeStr(s) {
 
 function formatAuthors(authorsStr) {
   if (!authorsStr) return '';
-
-  // Todas las variantes del nombre del autor a resaltar
   var highlights = [];
   if (typeof HIGHLIGHT_AUTHOR !== 'undefined' && HIGHLIGHT_AUTHOR) {
     highlights.push(normalizeStr(HIGHLIGHT_AUTHOR));
   }
-  // Variantes adicionales (apellido sin inicial del segundo nombre)
   highlights.push(normalizeStr('D. Uribe-Suarez'));
   highlights.push(normalizeStr('D. Uribe Suarez'));
   highlights.push(normalizeStr('D.A. Uribe Suarez'));
@@ -48,9 +45,7 @@ function formatAuthors(authorsStr) {
         ? parts[1].trim() + ' ' + parts[0].trim()
         : a.trim();
       var aNorm = normalizeStr(a);
-      var isHighlight = highlights.some(function(h) {
-        return aNorm.indexOf(h) !== -1;
-      });
+      var isHighlight = highlights.some(function(h) { return aNorm.indexOf(h) !== -1; });
       return isHighlight ? '<strong>' + name + '</strong>' : name;
     })
     .join(', ');
