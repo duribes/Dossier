@@ -168,15 +168,9 @@ function renderTalkItem(e) {
 
 function formatDate(day, month, year) {
 if (!year) return '';
-
-```
 if (!day && !month) return year;
-
 if (!day) return month + ' ' + year;
-
 return month + ' ' + day + ', ' + year;
-```
-
 }
 
 var authors = e.author || '';
@@ -184,17 +178,23 @@ var title   = e.title || '';
 var book    = e.booktitle || '';
 var org     = e.organization || '';
 var address = e.address || '';
+var date    = formatDate(e.day, e.month, e.year);
 var note    = e.note ? ' (' + e.note + ')' : '';
 
-var date = formatDate(e.day, e.month, e.year);
-
-return `     <div class="pub-item">       <div></div>       <div>
-        ${authors}. 
-        ${title}. 
-        In ${book}${address ? ', ' + address : ''}${date ? ', ' + date : ''}${note}. 
-        ${org}       </div>     </div>
-  `;
+return '<div class="pub-item">'
++ '<div></div>'
++ '<div>'
++ authors + '. '
++ title + '. '
++ 'In ' + book
++ (address ? ', ' + address : '')
++ (date ? ', ' + date : '')
++ note + '. '
++ org
++ '</div>'
++ '</div>';
 }
+
 
 
 
