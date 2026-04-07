@@ -246,12 +246,12 @@ date = year;
 var noteText = note ? ' (' + note + ')' : '';
 
 return `     <div class="pub-item">       <div></div>       <div>
-        ${authors}. 
-        ${title}. 
+        ${authors}. ${title}. 
         In ${book}${address ? ', ' + address : ''}${date ? ', ' + date : ''}${noteText}. 
         ${org}       </div>     </div>
   `;
 }
+
 
 
 
