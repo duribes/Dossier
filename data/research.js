@@ -45,7 +45,8 @@ const PUBLICATIONS_BIBTEX = `
 	year = {2023},
 	issn = {2027-8306},
 	doi = {10.19053/20278306.v13.n2.2023.16838},
-	author = {G.J. Posada-Hernández and M. López-Bonilla and D.A. Uribe-Suárez and V. Gómez-Ceballos and L.F. Cardona-Palacio}
+	author = {G.J. Posada-Hernández and M. López-Bonilla and D.A. Uribe-Suárez and V. Gómez-Ceballos and L.F. Cardona-Palacio},
+	topic     = {topic1}
 }
 
 
