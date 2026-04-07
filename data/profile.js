@@ -4,7 +4,11 @@
 // ============================================================
 var HIGHLIGHT_AUTHOR = "D.A. Uribe-Suárez";
 
-
+// ============================================================
+// PERSONAL DATA — Edit this file to update your info
+// IMPORTANT: Use "var", never "const" or "let"
+// IMPORTANT: All strings must be on a single line — no backticks, no line breaks inside strings
+// ============================================================
 var PROFILE = {
   name: "Dr. Nombre Apellido",
   title: "Profesor Asociado / Associate Professor",
@@ -13,11 +17,8 @@ var PROFILE = {
   email: "nombre.apellido@unal.edu.co",
   phone: "+57 (4) 000-0000",
   office: "Oficina 101, Edificio M8",
-  photo: "assets/photo.jpg", // Reemplaza con tu foto
-  bio: `Investigador en el área de [tu área principal]. Doctor en [disciplina] de [universidad]. 
-  Mi trabajo se centra en [descripción breve de tu investigación]. He publicado más de [N] artículos 
-  en revistas indexadas y he dirigido proyectos financiados por [entidades]. 
-  Actualmente soy [cargo] en [institución].`,
+  photo: "assets/photo.jpg",
+  bio: "Investigador en el área de [tu área principal]. Doctor en [disciplina] de [universidad]. Mi trabajo se centra en [descripción breve de tu investigación]. He publicado más de [N] artículos en revistas indexadas y he dirigido proyectos financiados por [entidades]. Actualmente soy [cargo] en [institución].",
   social: {
     github: "https://github.com/tuusuario",
     googleScholar: "https://scholar.google.com/citations?user=TUCODIGO",
@@ -25,6 +26,6 @@ var PROFILE = {
     researchgate: "https://www.researchgate.net/profile/Tu-Nombre",
     linkedin: "https://www.linkedin.com/in/tuusuario",
     cvlac: "https://scienti.minciencias.gov.co/cvlac/visualizador/generarCurriculoCv.do?cod_rh=TUCODIGO",
-    academia: "https://independent.academia.edu/TuNombre",
+    academia: "https://independent.academia.edu/TuNombre"
   }
 };
