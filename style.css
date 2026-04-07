@@ -409,16 +409,16 @@ h1, h2, h3, h4, h5, h6,
 }
 .member-header { display: flex; gap: 1.2rem; margin-bottom: 1.25rem; align-items: flex-start; }
 .member-photo {
-  width: 160px;
-  height: 160px;
+  width: 200px;
+  height: 200px;
   object-fit: cover;
   border-radius: 50%;
   border: 1px solid var(--rule);
   flex-shrink: 0;
 }
 .member-photo-placeholder {
-  width: 160px;
-  height: 160px;
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
   background: var(--paper-3);
   border: 1px solid var(--rule);
