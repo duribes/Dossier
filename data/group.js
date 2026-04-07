@@ -18,26 +18,23 @@ var GROUP_MEMBERS = [
     id: 1,
     name: "Dr. Diego Uribe-Suárez",
     position: "Postdoctoral Researcher",    
-    formation: "Computational Mechanics and Materials, Colorado State University, USA, 2006<br>MSc. Civil Engineering, Colorado State University, USA, 2002<br>BSc. Civil Engineering, UNIVERSIDAD EIA, Medellín, Colombia, 1993",
+    formation: "PhD. Computational Mechanics and Materials, Université Côte d'Azur, France, 2021<br>MSc. Engineering, Universidad EAFIT, Medellín, Colombia, 2015<br>BSc. Mechanical Engineering, Universidad EAFIT, Medellín, Colombia, 2013",
+    description: "Dr. Diego A. Uribe-Suárez is a Postdoctoral Researcher at Universidad de los Andes, Colombia. His research focuses on the development and implementation of advanced numerical methods for the simulation of complex engineering problems, with applications in the mechanical behavior of materials, fracture and damage mechanics, and structural analysis. He is currently working on the Material Point Method (MPM) and the Virtual Element Method (VEM), exploring their potential to model challenging problems in computational mechanics and materials science. His background combines strong expertise in finite element analysis, numerical simulation, and applied mathematics, together with hands-on experience in scientific software development. His research interests include computational mechanics, numerical methods for partial differential equations, finite and virtual element methods, material point methods, fracture mechanics, and multiscale modeling. He aims to contribute to both the theoretical foundations and practical applications of modern simulation tools, while fostering collaboration across academia and industry.",
+    email: "d.uribe@uniandes.edu.co",
+    photo: "assets/diego_uribe.jpg",
+    googleScholar: "https://scholar.google.com/citations?user=EzmANP0AAAAJ&hl=en",
+    linkedin: "https://www.linkedin.com/in/duribes/",
+    cvlac: "https://scienti.minciencias.gov.co/cvlac/visualizador/generarCurriculoCv.do?cod_rh=0001626017",
+    orcid: "https://orcid.org/0000-0002-0364-8561",
     
-    
-    
-    
-    description: "Dr. Fernando Ramirez is a Civil Engineer whose main area of expertise is Theoretical and Computational Mechanics. He earned his MSc and PhD degrees from Colorado State University. Dr Ramirez is currently a full professor at Universidad de los Andes in Colombia. His main topics of research include theoretical and computational mechanics, nanomechanics and biomechanics, structural mechanics, and composite and smart materials, among others. Dr. Ramirez has more than 250 publications, including over 35 highly cited peer reviewed journal papers. Dr. Ramirez also has two international patents related to his biomechanics research.",
-    email: "framirez@uniandes.edu.co",
-    photo: "assets/members/prof_fernando_ramirez.png",
-    googleScholar: "https://scholar.google.com/citations?hl=es&user=7RE9nmMAAAAJ",
-    linkedin: "https://www.linkedin.com/in/fernando-ramirez-763b1a17a/",
-    cvlac: "https://scienti.minciencias.gov.co/cvlac/visualizador/generarCurriculoCv.do?cod_rh=0000774847",
-    orcid: "https://orcid.org/0000-0001-5103-601X",
-    academia: "https://academia.uniandes.edu.co/AcademyCv/framirez"
+    academia: "https://academia.uniandes.edu.co/AcademyCv/d.uribe"
   },
   {
     id: 2,
     name: "Dr. Fernando Ramirez Rodriguez",
     position: "Full Professor",    
     formation: "PhD. Civil Engineering, Colorado State University, USA, 2006<br>MSc. Civil Engineering, Colorado State University, USA, 2002<br>BSc. Civil Engineering, UNIVERSIDAD EIA, Medellín, Colombia, 1993",
-    description: "Dr. Fernando Ramirez is a Civil Engineer whose main area of expertise is Theoretical and Computational Mechanics. He earned his MSc and PhD degrees from Colorado State University. Dr Ramirez is currently a full professor at Universidad de los Andes in Colombia. His main topics of research include theoretical and computational mechanics, nanomechanics and biomechanics, structural mechanics, and composite and smart materials, among others. Dr. Ramirez has more than 250 publications, including over 35 highly cited peer reviewed journal papers. Dr. Ramirez also has two international patents related to his biomechanics research.",
+    description: "Dr. Fernando Ramirez is a Civil Engineer whose main area of expertise is Theoretical and Computational Mechanics. Dr Ramirez is currently a full professor at Universidad de los Andes in Colombia. His main topics of research include theoretical and computational mechanics, nanomechanics and biomechanics, structural mechanics, and composite and smart materials, among others. Dr. Ramirez has more than 250 publications, including over 35 highly cited peer reviewed journal papers. Dr. Ramirez also has two international patents related to his biomechanics research.",
     email: "framirez@uniandes.edu.co",
     photo: "assets/members/prof_fernando_ramirez.png",
     googleScholar: "https://scholar.google.com/citations?hl=es&user=7RE9nmMAAAAJ",
