@@ -87,7 +87,7 @@ var GROUP_MEMBERS = [
     name: "Santiago Gonzalez Buenaventura",
     position: "Master’s Student (Research Project)",
     formation: "BSc. Mechanical Engineering, Universidad de los Andes, Bogotá, Colombia, 2024<br>MSc. Mechanical Engineering, Universidad de los Andes, Bogotá, Colombia, 2026",
-    description: "He is working on a small research project with the group, separate from his MSc thesis work. .......",
+    description: "He is contributing to a research project with the group, separate from his MSc thesis work, focused on the computational simulation of the thermal response associated with pyrolysis degradation in composite materials subjected to high temperatures typical of ablative thermal shield applications. The work involves the use of the finite element method and the exploration of the emerging Material Point Method, taking advantage of its adaptability to evolving material properties and large deformations, which are consistent with pyrolysis degradation and ablation boundary recession. The project aims to address this computational problem using novel modeling techniques, with potential impact in the aerospace sector through improved simulation of ablative thermal shields.",
     email: "s.gonzalez32@uniandes.edu.co",
     photo: "assets/members/Master_Buenaventura.jpeg",
     googleScholar: "https://scholar.google.com/citations?user=8dmISLYAAAAJ&hl=en",
