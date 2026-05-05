@@ -44,7 +44,6 @@ function showSection(id) {
 function renderHome() {
   var p = PROFILE;
 
-  // Photo
   var photoEl = document.getElementById('home-photo');
   if (p.photo) {
     var img = document.createElement('img');
@@ -71,13 +70,11 @@ function renderHome() {
     bioEl.textContent = p.bio;
   }
 
-  // Contact
   var contactEl = document.getElementById('home-contact-list');
   contactEl.innerHTML = '<li>' + emailIcon() + ' <a href="mailto:' + p.email + '">' + p.email + '</a></li>'
     + (p.phone  ? '<li>' + phoneIcon()  + ' <span>' + p.phone  + '</span></li>' : '')
     + (p.office ? '<li>' + officeIcon() + ' <span>' + p.office + '</span></li>' : '');
 
-  // Social buttons
   var socialEl = document.getElementById('home-social');
   var socialLinks = [
     { label: 'Scholar',      url: p.social.googleScholar },
@@ -105,43 +102,49 @@ function makePhotoPlaceholder() {
 
 /* ─── Research ───────────────────────────────────────────── */
 function renderResearch() {
-
   var pubs    = parseBibTeX(PUBLICATIONS_BIBTEX);
   var talks   = parseBibTeX(TALKS_BIBTEX);
-  var posters = parseBibTeX(POSTERS_BIBTEX);
-  
+  var posters = (typeof POSTERS_BIBTEX !== 'undefined') ? parseBibTeX(POSTERS_BIBTEX) : [];
+
+  // Research header image
+  var headerImg = document.getElementById('research-header-img');
+  if (headerImg && typeof RESEARCH_IMAGE !== 'undefined' && RESEARCH_IMAGE) {
+    headerImg.src = RESEARCH_IMAGE;
+    headerImg.style.display = 'block';
+  }
+
   // Journal publications
-  document.getElementById("journal-container").innerHTML =
-  pubs
-  .sort((a,b) => (b.year||0) - (a.year||0))
-  .map(renderPubItem)
-  .join("");
-  
+  var journalEl = document.getElementById('journal-container');
+  if (journalEl) {
+    journalEl.innerHTML = pubs
+      .sort(function(a,b) { return (b.year||0) - (a.year||0); })
+      .map(renderPubItem).join('');
+  }
+
   // Conferences
-  document.getElementById("conf-container").innerHTML =
-  talks
-  .sort((a,b) => (b.year||0) - (a.year||0))
-  .map(renderTalkItem)
-  .join("");
-  
+  var confEl = document.getElementById('conf-container');
+  if (confEl) {
+    confEl.innerHTML = talks
+      .sort(function(a,b) { return (b.year||0) - (a.year||0); })
+      .map(renderTalkItem).join('');
+  }
+
   // Posters
-  document.getElementById("poster-container").innerHTML =
-  posters
-  .sort((a,b) => (b.year||0) - (a.year||0))
-  .map(renderTalkItem)
-  .join("");
-  
-  // Reviewer
-  document.getElementById("reviewer-container").innerHTML =
-  REVIEWER_JOURNALS.map(j =>
-  '<div class="pub-item"><div></div><div>' + j + '</div></div>'
-  ).join("");
+  var posterEl = document.getElementById('poster-container');
+  if (posterEl) {
+    posterEl.innerHTML = posters
+      .sort(function(a,b) { return (b.year||0) - (a.year||0); })
+      .map(renderTalkItem).join('');
+  }
+
+  // Reviewer journals
+  var reviewerEl = document.getElementById('reviewer-container');
+  if (reviewerEl && typeof REVIEWER_JOURNALS !== 'undefined') {
+    reviewerEl.innerHTML = REVIEWER_JOURNALS.map(function(j) {
+      return '<div class="pub-item"><div></div><div>' + j + '</div></div>';
+    }).join('');
+  }
 }
-
-
-
-
-
 
 function renderPubItem(e) {
   var type   = e.type === 'book' ? 'Book' : e.type === 'article' ? 'Article' : e.type === 'inproceedings' ? 'Conference' : e.type;
@@ -164,43 +167,36 @@ function renderPubItem(e) {
     + '</div>';
 }
 
-function renderTalkItem(e) {
-
+// ── Must be outside renderTalkItem ──
 function formatDate(day, month, year) {
-if (!year) return '';
-if (!day && !month) return year;
-if (!day) return month + ' ' + year;
-return month + ' ' + day + ', ' + year;
+  if (!year) return '';
+  if (!day && !month) return year;
+  if (!day) return month + ' ' + year;
+  return month + ' ' + day + ', ' + year;
 }
 
-var authors = e.author || '';
-var title   = e.title || '';
-var book    = e.booktitle || '';
-var org     = e.organization || '';
-var address = e.address || '';
-var date    = formatDate(e.day, e.month, e.year);
-var note    = e.note ? ' (' + e.note + ')' : '';
+function renderTalkItem(e) {
+  var authors = e.author || '';
+  var title   = e.title || '';
+  var book    = e.booktitle || '';
+  var org     = e.organization || '';
+  var address = e.address || '';
+  var date    = formatDate(e.day, e.month, e.year);
+  var note    = e.note ? ' (' + e.note + ')' : '';
 
-return '<div class="pub-item">'
-+ '<div></div>'
-+ '<div>'
-+ authors + '. '
-+ title + '. '
-+ 'In ' + book
-+ (address ? ', ' + address : '')
-+ (date ? ', ' + date : '')
-+ note + '. '
-+ org
-+ '</div>'
-+ '</div>';
+  return '<div class="pub-item">'
+    + '<div></div>'
+    + '<div>'
+    + authors + '. '
+    + title + '. '
+    + 'In ' + book
+    + (address ? ', ' + address : '')
+    + (date ? ', ' + date : '')
+    + note + '. '
+    + org
+    + '</div>'
+    + '</div>';
 }
-
-
-
-
-
-
-
 
 /* ─── Research Group ─────────────────────────────────────── */
 function renderGroup() {
