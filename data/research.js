@@ -1,5 +1,5 @@
 var RESEARCH_TOPICS = [];
-
+var RESEARCH_IMAGE = "assets/publications.gif";
 var PUBLICATIONS_BIBTEX = `
 @article{LuisAmigo_2023,
 title = {Analysis of the added value for the quantitative reasoning competency at the Luis Amigó Catholic University in 2021},
