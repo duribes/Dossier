@@ -4,7 +4,7 @@
 // TIP: Only include the social fields that exist for each member.
 //      Missing fields are simply ignored — no need to add empty strings.
 // ============================================================
-var GROUP_IMAGE = "assets/tu-Grupo.gif";
+var GROUP_IMAGE = "assets/Grupo.gif";
 var GROUP_INFO = {
   name: "Diego Uribe-Suárez´s Group",
   //acronym: "",
