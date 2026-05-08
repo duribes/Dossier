@@ -2,7 +2,7 @@
 // INTERESTS — Edit your areas of interest here
 // IMPORTANT: ALL declarations must use "var", never "const" or "let"
 // ============================================================
-var INTERESTS_IMAGE = "assets/Research_interest.gif";
+var INTERESTS_IMAGE = "assets/Reseach_interest.gif";
 var INTERESTS_INTRO = "My work sits at the intersection of computational mechanics, numerical methods, and materials science. I am interested in developing and applying advanced simulation tools to understand the mechanical behavior of materials and structures, with emphasis on fracture, damage, and forming processes.";
 
 var RESEARCH_INTERESTS = [
