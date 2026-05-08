@@ -177,23 +177,24 @@ function formatDate(day, month, year) {
 
 function renderTalkItem(e) {
   var authors = e.author || '';
-  var title   = e.title || '';
+  var title   = e.title  || '';
   var book    = e.booktitle || '';
   var org     = e.organization || '';
   var address = e.address || '';
   var date    = formatDate(e.day, e.month, e.year);
   var note    = e.note ? ' (' + e.note + ')' : '';
 
-  return '<div class="pub-item">'
-    + '<div></div>'
-    + '<div>'
-    + authors + '. '
-    + title + '. '
-    + 'In ' + book
+  var venue = book
     + (address ? ', ' + address : '')
-    + (date ? ', ' + date : '')
-    + note + '. '
-    + org
+    + (date    ? ', ' + date    : '')
+    + (org     ? '. ' + org     : '');
+
+  return '<div class="pub-item">'
+    + '<span class="pub-year">' + (e.year || '—') + '</span>'
+    + '<div>'
+    + '<div class="pub-authors">' + formatAuthors(authors) + '</div>'
+    + '<div class="pub-title">' + title + note + '</div>'
+    + '<div class="pub-venue">' + venue + '</div>'
     + '</div>'
     + '</div>';
 }
