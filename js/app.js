@@ -205,6 +205,13 @@ function renderGroup() {
   document.getElementById('group-classification').textContent = GROUP_INFO.classification;
   document.getElementById('group-founded').textContent        = GROUP_INFO.founded;
 
+  // Group header image
+  var groupImg = document.getElementById('group-header-img');
+  if (groupImg && typeof GROUP_IMAGE !== 'undefined' && GROUP_IMAGE) {
+    groupImg.src = GROUP_IMAGE;
+    groupImg.style.display = 'block';
+  }
+
   var grid = document.getElementById('members-grid');
   grid.innerHTML = GROUP_MEMBERS.map(renderMemberCard).join('');
 }
