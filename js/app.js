@@ -276,6 +276,13 @@ function renderInterests() {
   var introEl = document.getElementById('interests-intro');
   if (introEl) introEl.textContent = INTERESTS_INTRO;
 
+  // Interests header image
+  var interestsImg = document.getElementById('interests-header-img');
+  if (interestsImg && typeof INTERESTS_IMAGE !== 'undefined' && INTERESTS_IMAGE) {
+    interestsImg.src = INTERESTS_IMAGE;
+    interestsImg.style.display = 'block';
+  }
+
   var researchContainer = document.getElementById('research-interests');
   if (researchContainer) {
     researchContainer.innerHTML = '';
