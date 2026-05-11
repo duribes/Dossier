@@ -288,8 +288,8 @@ h1, h2, h3, h4, h5, h6,
   justify-content: flex-end;
 }
 .research-header-img {
-  width: 420px;
-  max-width: 40vw;
+  width: 560px;
+  max-width: 48vw;
   height: auto;
   display: block;
   border: 1px solid var(--rule);
