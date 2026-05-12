@@ -295,18 +295,32 @@ h1, h2, h3, h4, h5, h6,
   border: 1px solid var(--rule);
   background: var(--paper-2);
 }
-@media (max-width: 768px) {
-  .research-page-header {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-  }
-  .research-header-img {
-    width: 100%;
-    max-width: 100%;
-  }
+
+/* ── Group page header — sin imagen lateral ──────────────── */
+#section-group .research-page-header {
+  grid-template-columns: 1fr;
+  gap: 0;
+}
+#section-group .research-header-media {
+  display: none;
+}
+#section-group .research-header-text {
+  max-width: 100%;
 }
 
+/* ── Interests page header — sin imagen lateral ──────────── */
+#section-interests .research-page-header {
+  grid-template-columns: 1fr;
+  gap: 0;
+}
+#section-interests .research-header-media {
+  display: none;
+}
+#section-interests .research-header-text {
+  max-width: 100%;
+}
 
+/* ── Publications ────────────────────────────────────────── */
 .topic-block { margin-bottom: 4rem; }
 .topic-header {
   border-left: 2px solid var(--accent);
@@ -656,8 +670,12 @@ footer {
   .home-photo-col { position: static; }
   .home-photo, .home-photo-placeholder { aspect-ratio: 1/1; max-width: 200px; }
 
+  .research-page-header { grid-template-columns: 1fr; gap: 1.5rem; }
+  .research-header-img { width: 100%; max-width: 100%; }
+
   .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
-  .members-grid { grid-template-columns: 1fr; }  .courses-grid { grid-template-columns: 1fr; }
+  .members-grid { grid-template-columns: 1fr; }
+  .courses-grid { grid-template-columns: 1fr; }
   .interests-cards { grid-template-columns: 1fr; }
   .section { padding: 3rem 0; }
 }
