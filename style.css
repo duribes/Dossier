@@ -296,21 +296,29 @@ h1, h2, h3, h4, h5, h6,
   background: var(--paper-2);
 }
 
-/* ── Group page header — sin imagen lateral ──────────────── */
+/* ── Group page header — imagen al lado del texto ────────── */
 #section-group .research-page-header {
-  grid-template-columns: 1fr;
-  gap: 1.5rem;
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  gap: 3rem;
+  align-items: start;
 }
+
+#section-group .research-header-text {
+  max-width: 65ch;
+}
+
 #section-group .research-header-media {
   display: flex;
-  justify-content: flex-start;
+  justify-content: flex-end;
+  align-items: flex-start;
 }
+
 #section-group .research-header-img {
   width: 100%;
-  max-width: 100%;
-}
-#section-group .research-header-text {
-  max-width: 100%;
+  max-width: 420px;
+  height: auto;
+  border: 1px solid var(--rule);
 }
 
 /* ── Interests page header — sin imagen lateral ──────────── */
