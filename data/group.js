@@ -100,7 +100,7 @@ var GROUP_MEMBERS = [
     id: 7,
     name: "Carlos León",
     position: "Undergraduate student",
-    formation: "BSc. Civil Engineering, Universidad de los Andes, Bogotá, Colombia, 2026<br>BSc. Mechanical Engineering, Universidad de los Andes, Bogotá, Colombia, 2026 (Expected)",
+    formation: "BSc. Civil Engineering, Universidad de los Andes, Bogotá, Colombia, 2026 (Expected)<br>BSc. Mechanical Engineering, Universidad de los Andes, Bogotá, Colombia, 2026 (Expected)",
     description: "His project revolves around getting familiarized with the virtual element method such that I can comprehend and utilize VEM++, a C++ in-house virtual element library in order to design a specific application for linear elasticity problems.",
     email: "c.leonp@uniandes.edu.co",
     photo: "assets/members/Undergrad_Carlos_Leon.jpeg",
