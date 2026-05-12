@@ -299,10 +299,15 @@ h1, h2, h3, h4, h5, h6,
 /* ── Group page header — sin imagen lateral ──────────────── */
 #section-group .research-page-header {
   grid-template-columns: 1fr;
-  gap: 0;
+  gap: 1.5rem;
 }
 #section-group .research-header-media {
-  display: none;
+  display: flex;
+  justify-content: flex-start;
+}
+#section-group .research-header-img {
+  width: 100%;
+  max-width: 100%;
 }
 #section-group .research-header-text {
   max-width: 100%;
