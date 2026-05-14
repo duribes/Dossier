@@ -323,14 +323,26 @@ h1, h2, h3, h4, h5, h6,
 
 /* ── Interests page header — sin imagen lateral ──────────── */
 #section-interests .research-page-header {
-  grid-template-columns: 1fr;
-  gap: 0;
+  grid-template-columns: 1fr 1fr;   /* texto | imagen */
+  gap: 3rem;
+  align-items: center;              /* centra verticalmente */
 }
-#section-interests .research-header-media {
-  display: none;
-}
+
 #section-interests .research-header-text {
   max-width: 100%;
+}
+
+#section-interests .research-header-media {
+  display: flex;                    /* ya no está oculto */
+  justify-content: flex-end;
+  align-items: center;
+}
+
+#section-interests .research-header-img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border: 1px solid var(--rule);
 }
 
 /* ── Publications ────────────────────────────────────────── */
