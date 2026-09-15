@@ -122,6 +122,7 @@ var GROUP_MEMBERS = [
     id: 9,
     name: "Nicolas Andres Useche Castillo",
     position: "Undergraduate Researcher",
+    photo: "assets/members/Undergrad_Nicolas_Useche.JPG",
     description: "Nicolas works on coupled multiphysics problems, with interests spanning mesh-based numerical methods—particularly isogeometric analysis—and particle-based approaches such as SPH, MPM, and PFEM. He currently develops and implements computational models for cutting processes in anisotropic metals and studies cavitation-induced impacts on walls made of reinforced materials.",
     orcid: "https://orcid.org/0009-0003-9363-8766",
     linkedin: "https://www.linkedin.com/in/nicolas-andres-useche-castillo-942192331",
